@@ -208,7 +208,7 @@ const Index = () => {
             {/* Social Links */}
             <div className="flex items-center gap-8 mb-12">
               <a
-                href="https://github.com"
+                href="https://github.com/bkandh30"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 hover:scale-110"
@@ -225,7 +225,7 @@ const Index = () => {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/kandharibhavya/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 hover:scale-110"
@@ -242,7 +242,7 @@ const Index = () => {
                 </svg>
               </a>
               <a
-                href="mailto:hello@example.com"
+                href="mailto:bhavya.kandhari.eng@gmail.com"
                 className="transition-all duration-300 hover:scale-110"
                 style={{ color: "hsl(48 3% 50%)" }}
                 aria-label="Email"
@@ -1178,6 +1178,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
+
               {/* Education Item 2 */}
               <div
                 className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"

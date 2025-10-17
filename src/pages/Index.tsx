@@ -316,12 +316,192 @@ const Index = () => {
             </div>
           </section>
 
+          {/* Experience Section */}
           <section id="experience" className="scroll-mt-24">
-            <div style={{ color: "hsl(48 20% 20%)" }}>
-              <h2 className="text-2xl font-bold mb-4">Experience Section</h2>
-              <p style={{ color: "hsl(48 3% 50%)" }}>
-                Lorem ipsum dolor sit amet.
-              </p>
+            <div className="space-y-8">
+              {/* Experience Item 1 */}
+              <div
+                className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"
+                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+              >
+                <div className="flex flex-col md:flex-row md:gap-8">
+                  {/* Date Column */}
+                  <div className="md:w-1/4 mb-2 md:mb-0">
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: "#83827d",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      2023 — 2025
+                    </span>
+                  </div>
+
+                  {/* Content Column */}
+                  <div className="md:w-3/4">
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "600",
+                        color: "#3d3929",
+                        marginBottom: "8px",
+                      }}
+                    >
+                      Software Engineer · Ira A Fulton School of Engineering
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: "15px",
+                        color: "#83827d",
+                        lineHeight: "1.7",
+                        marginBottom: "16px",
+                      }}
+                    >
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Fugiat alias quibusdam repellendus unde perferendis est
+                      sed minus explicabo. Earum, maiores.
+                    </p>
+
+                    {/* Skills */}
+                    <div className="flex flex-wrap gap-2">
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        Skill1
+                      </span>
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        Skill2
+                      </span>
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        Skill3
+                      </span>
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        Skill4
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Experience Item 2 */}
+              <div
+                className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"
+                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+              >
+                <div className="flex flex-col md:flex-row md:gap-8">
+                  {/* Date Column */}
+                  <div className="md:w-1/4 mb-2 md:mb-0">
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: "#83827d",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      2021 — 2023
+                    </span>
+                  </div>
+
+                  {/* Content Column */}
+                  <div className="md:w-3/4">
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "600",
+                        color: "#3d3929",
+                        marginBottom: "8px",
+                      }}
+                    >
+                      Associate Software Engineer · Ernst & Young (EY)
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: "15px",
+                        color: "#83827d",
+                        lineHeight: "1.7",
+                        marginBottom: "16px",
+                      }}
+                    >
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Id fugiat, quia vitae aliquam veniam repellat ipsum sunt
+                      ex temporibus voluptates!
+                    </p>
+
+                    {/* Skills */}
+                    <div className="flex flex-wrap gap-2">
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        Skill1
+                      </span>
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        Skill2
+                      </span>
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        Skill3
+                      </span>
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        Skill4
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 

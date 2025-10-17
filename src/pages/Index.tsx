@@ -56,7 +56,7 @@ const Index = () => {
       <div
         className="pointer-events-none fixed inset-0 z-30 transition duration-300 hidden lg:block"
         style={{
-          background: `radial-gradient(400px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 239, 204, 0.25), transparent 80%)`,
+          background: `radial-gradient(400px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 230, 204, 0.25), transparent 80%)`,
         }}
       />
       {/* Fixed Sidebar - Only visible on large screens */}

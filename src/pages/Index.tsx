@@ -332,14 +332,34 @@ const Index = () => {
                 pushing my craft toward building faster, more resilient systems.
               </p>
               <button
-                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded transition-all duration-300 group"
+                className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-lg transition-all duration-300 group relative overflow-hidden"
                 style={{
                   backgroundColor: "transparent",
-                  color: "#3d3929",
-                  border: "1px solid rgba(201, 100, 66, 0.4)",
+                  color: "#c96442",
+                  border: "1px solid #c96442",
+                  fontWeight: "500",
+                  position: "relative",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = "#ffffff";
+                  const bg = e.currentTarget.querySelector(".button-bg");
+                  if (bg) (bg as HTMLElement).style.transform = "translateX(0)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = "#c96442";
+                  const bg = e.currentTarget.querySelector(".button-bg");
+                  if (bg)
+                    (bg as HTMLElement).style.transform = "translateX(-100%)";
                 }}
               >
-                View Full Résumé
+                <span
+                  className="button-bg absolute inset-0 -z-10 transition-transform duration-250"
+                  style={{
+                    backgroundColor: "#c96442",
+                    transform: "translateX(-100%)",
+                  }}
+                />
+                <span className="relative z-10">View Full Résumé</span>
                 <ArrowUpRight
                   className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                   style={{ color: "#3d3929" }}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Mail, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight, ExternalLink } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Index = () => {
@@ -1340,12 +1340,577 @@ const Index = () => {
             </div>
           </section>
 
+          {/* Projects Section */}
           <section id="projects" className="scroll-mt-24">
-            <div style={{ color: "hsl(48 20% 20%)" }}>
-              <h2 className="text-2xl font-bold mb-4">Projects Section</h2>
-              <p style={{ color: "hsl(48 3% 50%)" }}>
-                Lorem ipsum dolor sit amet.
-              </p>
+            <div className="space-y-8">
+              {/* Project 1 */}
+              <div
+                className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"
+                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+              >
+                <div className="flex flex-col">
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      color: "#3d3929",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    URL Shortener Webapp
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "#83827d",
+                      lineHeight: "1.7",
+                      marginBottom: "16px",
+                    }}
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cupiditate ea impedit, quae quisquam, ipsa nostrum iure illo
+                    possimus voluptate quasi blanditiis molestias. Maiores ex
+                    commodi ducimus delectus adipisci asperiores suscipit.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill1
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill2
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill3
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill4
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill5
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill6
+                    </span>
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex gap-4">
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+                      style={{
+                        fontSize: "14px",
+                        color: "#c96442",
+                        fontWeight: "500",
+                      }}
+                    >
+                      <span>View Project</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+                      style={{
+                        fontSize: "14px",
+                        color: "#c96442",
+                        fontWeight: "500",
+                      }}
+                    >
+                      <span>GitHub</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 2 */}
+              <div
+                className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"
+                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+              >
+                <div className="flex flex-col">
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      color: "#3d3929",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    Metered API Server
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "#83827d",
+                      lineHeight: "1.7",
+                      marginBottom: "16px",
+                    }}
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                    consequatur magnam quia soluta aperiam cum animi optio
+                    distinctio a voluptate, sit voluptates totam sapiente
+                    recusandae mollitia itaque voluptatibus excepturi aliquid?
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill1
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill2
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill3
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill4
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill5
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill6
+                    </span>
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex gap-4">
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+                      style={{
+                        fontSize: "14px",
+                        color: "#c96442",
+                        fontWeight: "500",
+                      }}
+                    >
+                      <span>GitHub</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 3 */}
+              <div
+                className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"
+                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+              >
+                <div className="flex flex-col">
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      color: "#3d3929",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    GoFlix - RESTful Movie Management API
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "#83827d",
+                      lineHeight: "1.7",
+                      marginBottom: "16px",
+                    }}
+                  >
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
+                    eum vel magni eaque non explicabo similique quis consequatur
+                    neque qui, dicta facilis! Nesciunt repudiandae asperiores
+                    dolores. In dicta distinctio repellendus.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill1
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill2
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill3
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill4
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill5
+                    </span>
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex gap-4">
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+                      style={{
+                        fontSize: "14px",
+                        color: "#c96442",
+                        fontWeight: "500",
+                      }}
+                    >
+                      <span>GitHub</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 4 */}
+              <div
+                className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"
+                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+              >
+                <div className="flex flex-col">
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      color: "#3d3929",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    Async Text Summarization Microservice
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "#83827d",
+                      lineHeight: "1.7",
+                      marginBottom: "16px",
+                    }}
+                  >
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
+                    eum vel magni eaque non explicabo similique quis consequatur
+                    neque qui, dicta facilis! Nesciunt repudiandae asperiores
+                    dolores. In dicta distinctio repellendus.
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill1
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill2
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill3
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill4
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill5
+                    </span>
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex gap-4">
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+                      style={{
+                        fontSize: "14px",
+                        color: "#c96442",
+                        fontWeight: "500",
+                      }}
+                    >
+                      <span>GitHub</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Project 5 */}
+              <div
+                className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"
+                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+              >
+                <div className="flex flex-col">
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: "600",
+                      color: "#3d3929",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    AWS Cloud Resume Challenge
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "#83827d",
+                      lineHeight: "1.7",
+                      marginBottom: "16px",
+                    }}
+                  >
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Debitis esse corporis cum totam sapiente iure consequatur,
+                    accusamus dicta obcaecati nobis odio natus, magnam quaerat
+                    consequuntur repellat beatae provident suscipit unde?
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill1
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill2
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill3
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill4
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Skill5
+                    </span>
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex gap-4">
+                    <a
+                      href="#"
+                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+                      style={{
+                        fontSize: "14px",
+                        color: "#c96442",
+                        fontWeight: "500",
+                      }}
+                    >
+                      <span>GitHub</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>

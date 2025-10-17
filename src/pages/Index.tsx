@@ -269,11 +269,9 @@ const Index = () => {
                   lineHeight: "1.6",
                 }}
               >
-                I'm a developer passionate about crafting accessible,
-                pixel-perfect user interfaces that blend thoughtful design with
-                robust engineering. My favorite work lies at the intersection of
-                design and development, creating experiences that not only look
-                great but are meticulously built for performance and usability.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
+                nam exercitationem autem non totam rerum, obcaecati provident
+                necessitatibus excepturi culpa.
               </p>
               <p
                 style={{
@@ -282,11 +280,10 @@ const Index = () => {
                   lineHeight: "1.6",
                 }}
               >
-                In the past, I've had the opportunity to develop software across
-                a variety of settings — from advertising agencies and large
-                corporations to start-ups and small digital product studios. I
-                enjoy building products that make a difference in people's
-                lives.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                eum error rem perferendis asperiores sequi. Consequuntur eaque
+                repellendus doloribus veniam nulla quaerat, alias itaque culpa
+                tenetur harum voluptas, aut impedit.
               </p>
               <p
                 style={{
@@ -295,9 +292,10 @@ const Index = () => {
                   lineHeight: "1.6",
                 }}
               >
-                In my spare time, I'm usually exploring new technologies,
-                contributing to open source projects, or enjoying outdoor
-                activities.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                omnis a adipisci quia iusto sint fugit sunt pariatur?
+                Repellendus tenetur nisi cum perferendis placeat corporis minus
+                architecto quidem nobis provident.
               </p>
               <button
                 className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded transition-all duration-300 group"
@@ -505,12 +503,505 @@ const Index = () => {
             </div>
           </section>
 
+          {/* Skills Section */}
           <section id="skills" className="scroll-mt-24">
-            <div style={{ color: "hsl(48 20% 20%)" }}>
-              <h2 className="text-2xl font-bold mb-4">Skills Section</h2>
-              <p style={{ color: "hsl(48 3% 50%)" }}>
-                Lorem ipsum dolor sit amet.
-              </p>
+            <div className="space-y-6">
+              {/* Languages */}
+              <div>
+                <h3
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#3d3929",
+                    marginBottom: "12px",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  Languages
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Rust
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    JavaScript
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    TypeScript
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Golang
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Python
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    SQL
+                  </span>
+                </div>
+              </div>
+
+              {/* Frameworks & Libraries */}
+              <div>
+                <h3
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#3d3929",
+                    marginBottom: "12px",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  Frameworks & Libraries
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    HTML
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    CSS
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    React.js
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Next.js
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    TailwindCSS
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Node.js
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Express.js
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    FastAPI
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Warp
+                  </span>
+                </div>
+              </div>
+
+              {/* Cloud & DevOps */}
+              <div>
+                <h3
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#3d3929",
+                    marginBottom: "12px",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  Cloud & DevOps
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    AWS
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Docker
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Kubernetes
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Git/GitHub
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Linux
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    GitHub Actions
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Prometheus
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Grafana
+                  </span>
+                </div>
+              </div>
+
+              {/* Databases & Tools */}
+              <div>
+                <h3
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#3d3929",
+                    marginBottom: "12px",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  Databases & Tools
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    PostgreSQL
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    MySQL
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    BoltDB
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Redis
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Power BI
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Tableau
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    AWS QuickSight
+                  </span>
+                </div>
+              </div>
+
+              {/* Skills */}
+              <div>
+                <h3
+                  style={{
+                    fontSize: "14px",
+                    fontWeight: "600",
+                    color: "#3d3929",
+                    marginBottom: "12px",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  Skills
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Agile
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Version Control
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Microservices
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Distributed Systems
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Scalability
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Fault Tolerance
+                  </span>
+                  <span
+                    className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
+                    style={{
+                      fontSize: "13px",
+                      backgroundColor: "rgba(201, 100, 66, 0.1)",
+                      color: "#c96442",
+                      border: "1px solid rgba(201, 100, 66, 0.2)",
+                    }}
+                  >
+                    Observability
+                  </span>
+                </div>
+              </div>
             </div>
           </section>
 

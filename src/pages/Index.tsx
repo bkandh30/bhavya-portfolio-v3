@@ -493,9 +493,9 @@ const Index = () => {
                         marginBottom: "16px",
                       }}
                     >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Id fugiat, quia vitae aliquam veniam repellat ipsum sunt
-                      ex temporibus voluptates!
+                      I worked on cloud-native data engineering pipelines that
+                      processed millions of vulnerability records daily to
+                      strengthen enterprise security insights.
                     </p>
 
                     {/* Skills */}
@@ -508,7 +508,7 @@ const Index = () => {
                           color: "#c96442",
                         }}
                       >
-                        Skill1
+                        AWS
                       </span>
                       <span
                         className="px-3 py-1 rounded-full"
@@ -518,7 +518,7 @@ const Index = () => {
                           color: "#c96442",
                         }}
                       >
-                        Skill2
+                        Python
                       </span>
                       <span
                         className="px-3 py-1 rounded-full"
@@ -528,7 +528,7 @@ const Index = () => {
                           color: "#c96442",
                         }}
                       >
-                        Skill3
+                        PySpark
                       </span>
                       <span
                         className="px-3 py-1 rounded-full"
@@ -538,7 +538,27 @@ const Index = () => {
                           color: "#c96442",
                         }}
                       >
-                        Skill4
+                        PostgreSQL
+                      </span>
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        ETL Pipelines
+                      </span>
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        Data Engineering
                       </span>
                     </div>
                   </div>

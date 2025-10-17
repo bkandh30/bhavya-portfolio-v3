@@ -198,7 +198,7 @@ const Index = () => {
               style={{ color: "hsl(48 3% 50%)" }}
               aria-label="Email"
             >
-              <Mail className="w-7 h-7" />
+              <Mail className="w-9 h-9 strokeWidth={1.5}" />
             </a>
           </div>
         </div>
@@ -276,7 +276,7 @@ const Index = () => {
                 style={{ color: "hsl(48 3% 50%)" }}
                 aria-label="Email"
               >
-                <Mail className="w-7 h-7" />
+                <Mail className="w-9 h-9 strokeWidth={1.5}" />
               </a>
             </div>
           </section>

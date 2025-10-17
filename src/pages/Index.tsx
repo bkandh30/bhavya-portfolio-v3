@@ -232,7 +232,8 @@ const Index = () => {
               Software Engineer
             </h2>
             <p className="mb-8" style={{ color: "hsl(48 3% 50%)" }}>
-              I build accessible, pixel-perfect digital experiences for the web.
+              I build reliable, accessible, and scalable systems that power
+              seamless digital experiences.
             </p>
 
             {/* Social Links */}
@@ -299,9 +300,11 @@ const Index = () => {
                   lineHeight: "1.6",
                 }}
               >
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
-                nam exercitationem autem non totam rerum, obcaecati provident
-                necessitatibus excepturi culpa.
+                I’m a software engineer with a focus on building reliable
+                backend systems and developer tools that make complex
+                infrastructure feel effortless. My work blends backend
+                engineering, cloud systems, and AI-driven workflows — all aimed
+                at improving developer experience and scalability.
               </p>
               <p
                 style={{
@@ -310,10 +313,13 @@ const Index = () => {
                   lineHeight: "1.6",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-                eum error rem perferendis asperiores sequi. Consequuntur eaque
-                repellendus doloribus veniam nulla quaerat, alias itaque culpa
-                tenetur harum voluptas, aut impedit.
+                Recently, I graduated from Arizona State University with
+                Master’s in Computer Science, where I explore distributed
+                systems, cloud computing, and data processing at scale. Outside
+                of academics, I’ve worked at Ernst & Young and the Ira A. Fulton
+                Schools of Engineering, where I built automation pipelines, data
+                platforms, and APIs that powered large-scale evaluation systems
+                and analytics workflows.
               </p>
               <p
                 style={{
@@ -322,10 +328,8 @@ const Index = () => {
                   lineHeight: "1.6",
                 }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-                omnis a adipisci quia iusto sint fugit sunt pariatur?
-                Repellendus tenetur nisi cum perferendis placeat corporis minus
-                architecto quidem nobis provident.
+                Lately, I’ve been experimenting with Rust, Go, and TypeScript —
+                pushing my craft toward building faster, more resilient systems.
               </p>
               <button
                 className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded transition-all duration-300 group"

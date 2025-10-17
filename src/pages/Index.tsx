@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Mail, ArrowUpRight } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("about");

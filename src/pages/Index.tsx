@@ -150,13 +150,11 @@ const Index = () => {
           <div className="text-center text-slate">
             <h2 className="text-3xl font-bold mb-4">Main Content Area</h2>
             <p className="text-slate-muted">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-              ut tempora accusantium sed necessitatibus at neque consectetur
-              molestias perferendis officiis, provident sapiente asperiores?
-              Corrupti exercitationem est deserunt molestias voluptatem quasi.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Inventore, laborum.
             </p>
 
-            {/* Temporary sections for testing active scroll section */}
+            {/* Temporary sections for scroll testing */}
             <div
               id="about"
               className="h-screen flex items-center justify-center border border-slate/20 rounded-lg mt-8"

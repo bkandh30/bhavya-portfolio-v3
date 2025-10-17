@@ -95,11 +95,8 @@ const Index = () => {
       {/* Fixed Sidebar - Only on large screens */}
       <aside className="hidden lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:w-[45%] lg:flex lg:items-center lg:justify-center lg:p-24">
         <div className="max-w-md w-full">
-          <Avatar className="h-28 w-28 mb-6 ring-2 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg">
-            <AvatarImage
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
-              alt="Profile"
-            />
+          <Avatar className="h-28 w-28 mb-6 ring-1 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg">
+            <AvatarImage src="/headshot.png" alt="Profile" />
             <AvatarFallback className="text-2xl font-bold bg-primary/10 text-primary">
               BK
             </AvatarFallback>

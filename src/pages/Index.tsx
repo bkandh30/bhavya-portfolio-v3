@@ -391,9 +391,9 @@ const Index = () => {
                         marginBottom: "16px",
                       }}
                     >
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Fugiat alias quibusdam repellendus unde perferendis est
-                      sed minus explicabo. Earum, maiores.
+                      At ASU, I built automation tools and validation pipelines
+                      to help scale distributed computing coursework for
+                      hundreds of students each semester.
                     </p>
 
                     {/* Skills */}
@@ -406,7 +406,7 @@ const Index = () => {
                           color: "#c96442",
                         }}
                       >
-                        Skill1
+                        Python
                       </span>
                       <span
                         className="px-3 py-1 rounded-full"
@@ -416,7 +416,7 @@ const Index = () => {
                           color: "#c96442",
                         }}
                       >
-                        Skill2
+                        C#
                       </span>
                       <span
                         className="px-3 py-1 rounded-full"
@@ -426,7 +426,7 @@ const Index = () => {
                           color: "#c96442",
                         }}
                       >
-                        Skill3
+                        Pytest
                       </span>
                       <span
                         className="px-3 py-1 rounded-full"
@@ -436,7 +436,17 @@ const Index = () => {
                           color: "#c96442",
                         }}
                       >
-                        Skill4
+                        REST APIs
+                      </span>
+                      <span
+                        className="px-3 py-1 rounded-full"
+                        style={{
+                          fontSize: "12px",
+                          backgroundColor: "rgba(201, 100, 66, 0.1)",
+                          color: "#c96442",
+                        }}
+                      >
+                        Distributed Systems
                       </span>
                     </div>
                   </div>

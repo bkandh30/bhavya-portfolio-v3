@@ -1005,12 +1005,366 @@ const Index = () => {
             </div>
           </section>
 
+          {/* Education Section */}
           <section id="education" className="scroll-mt-24">
-            <div style={{ color: "hsl(48 20% 20%)" }}>
-              <h2 className="text-2xl font-bold mb-4">Education Section</h2>
-              <p style={{ color: "hsl(48 3% 50%)" }}>
-                Lorem ipsum dolor sit amet.
-              </p>
+            <div className="space-y-8">
+              {/* Education Item 1 */}
+              <div
+                className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"
+                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+              >
+                <div className="flex flex-col md:flex-row md:gap-8">
+                  {/* Date Column */}
+                  <div className="md:w-1/4 mb-2 md:mb-0">
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: "#83827d",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      2023 — 2025
+                    </span>
+                  </div>
+
+                  {/* Content Column */}
+                  <div className="md:w-3/4">
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "600",
+                        color: "#3d3929",
+                        marginBottom: "8px",
+                      }}
+                    >
+                      Masters of Computer Science
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: "15px",
+                        color: "#83827d",
+                        marginBottom: "12px",
+                      }}
+                    >
+                      Arizona State University · Tempe, Arizona
+                    </p>
+                    <p
+                      style={{
+                        fontSize: "14px",
+                        color: "#83827d",
+                        lineHeight: "1.7",
+                        marginBottom: "16px",
+                      }}
+                    >
+                      Focused on core computer science subjects such as data
+                      structures and algorithms, databases, software engineering
+                      principles. Also focused on operating systems, theory of
+                      computation, computer architecture, compiler construction,
+                      distributed systems and computer networks.
+                    </p>
+
+                    {/* Coursework */}
+                    <div>
+                      <p
+                        style={{
+                          fontSize: "13px",
+                          fontWeight: "600",
+                          color: "#3d3929",
+                          marginBottom: "8px",
+                        }}
+                      >
+                        Relevant Coursework:
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Digital Video Processing
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Foundations of Algorithm
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Distributed Software Development
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Software Security
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Information Assurance and Security
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Cloud Computing
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Software Verification, Validation and Testing
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Data Mining
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Data Processing at Scale
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Applied Cryptography
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Education Item 2 */}
+              <div
+                className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"
+                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+              >
+                <div className="flex flex-col md:flex-row md:gap-8">
+                  {/* Date Column */}
+                  <div className="md:w-1/4 mb-2 md:mb-0">
+                    <span
+                      style={{
+                        fontSize: "12px",
+                        color: "#83827d",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      2017 — 2021
+                    </span>
+                  </div>
+
+                  {/* Content Column */}
+                  <div className="md:w-3/4">
+                    <h3
+                      style={{
+                        fontSize: "18px",
+                        fontWeight: "600",
+                        color: "#3d3929",
+                        marginBottom: "8px",
+                      }}
+                    >
+                      Bachelor of Technology in Computer Science
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: "15px",
+                        color: "#83827d",
+                        marginBottom: "12px",
+                      }}
+                    >
+                      Amity University · Noida, India
+                    </p>
+                    <p
+                      style={{
+                        fontSize: "14px",
+                        color: "#83827d",
+                        lineHeight: "1.7",
+                        marginBottom: "16px",
+                      }}
+                    >
+                      Focused on core computer science subjects such as data
+                      structures and algorithms, databases, software engineering
+                      principles. Also focused on operating systems, theory of
+                      computation, computer architecture, compiler construction,
+                      distributed systems and computer networks.
+                    </p>
+
+                    {/* Coursework */}
+                    <div>
+                      <p
+                        style={{
+                          fontSize: "13px",
+                          fontWeight: "600",
+                          color: "#3d3929",
+                          marginBottom: "8px",
+                        }}
+                      >
+                        Relevant Coursework:
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Data Structures and Algorithms
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Database Management Systems
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Object Oriented Programming
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Theory of Computation
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Operating System
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Computer Networks
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Distributed Systems
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Computer Architecture
+                        </span>
+                        <span
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          Compiler Construction
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 

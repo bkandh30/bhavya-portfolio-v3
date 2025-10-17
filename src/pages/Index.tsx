@@ -1683,10 +1683,8 @@ const Index = () => {
                       marginBottom: "16px",
                     }}
                   >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
-                    eum vel magni eaque non explicabo similique quis consequatur
-                    neque qui, dicta facilis! Nesciunt repudiandae asperiores
-                    dolores. In dicta distinctio repellendus.
+                    A backend service written in Go for managing movie data,
+                    built with performance, security and observability in mind.
                   </p>
 
                   {/* Tech Stack */}
@@ -1700,7 +1698,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill1
+                      Go
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1711,7 +1709,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill2
+                      PostgreSQL
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1722,7 +1720,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill3
+                      JWT
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1733,7 +1731,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill4
+                      Docker
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1744,14 +1742,27 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill5
+                      Logging
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      Metrics
                     </span>
                   </div>
 
                   {/* Links */}
                   <div className="flex gap-4">
                     <a
-                      href="#"
+                      href="https://github.com/bkandh30/GoFlix"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
                       style={{
                         fontSize: "14px",

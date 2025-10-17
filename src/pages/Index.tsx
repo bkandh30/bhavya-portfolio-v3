@@ -208,10 +208,7 @@ const Index = () => {
           {/* Mobile Hero - Only visible on small screens */}
           <section className="lg:hidden">
             <Avatar className="h-24 w-24 mb-6 ring-2 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg">
-              <AvatarImage
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
-                alt="Profile"
-              />
+              <AvatarImage src="/headshot.png" alt="Profile" />
               <AvatarFallback className="text-xl font-bold bg-primary/10 text-primary">
                 BK
               </AvatarFallback>

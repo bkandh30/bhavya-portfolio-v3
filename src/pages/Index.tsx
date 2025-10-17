@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Mail } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("about");
@@ -51,7 +52,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-navy relative">
+    <div
+      className="min-h-screen relative"
+      style={{ backgroundColor: "hsl(48 38% 96%)" }}
+    >
       {/* Cursor spotlight effect - disabled on mobile for performance */}
       <div
         className="pointer-events-none fixed inset-0 z-30 transition duration-300 hidden lg:block"
@@ -72,15 +76,20 @@ const Index = () => {
               BK
             </AvatarFallback>
           </Avatar>
-          <h1 className="text-5xl font-bold text-slate mb-2">
+          <h1
+            className="text-5xl font-bold mb-2"
+            style={{ color: "hsl(48 20% 20%)" }}
+          >
             Bhavya Kandhari
           </h1>
-          <h2 className="text-xl font-semibold text-slate mb-4">
+          <h2
+            className="text-xl font-semibold mb-4"
+            style={{ color: "hsl(48 20% 20%)" }}
+          >
             Software Engineer
           </h2>
-          <p className="text-slate-muted mb-8">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat,
-            explicabo?
+          <p className="mb-8" style={{ color: "hsl(48 3% 50%)" }}>
+            I build accessible, pixel-perfect digital experiences for the web.
           </p>
 
           {/* Navigation */}
@@ -92,17 +101,24 @@ const Index = () => {
                     <button
                       onClick={() => scrollToSection(section)}
                       className={`group flex items-center text-xs uppercase tracking-widest transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm ${
-                        activeSection === section
-                          ? "text-slate font-bold"
-                          : "text-slate-muted hover:text-slate font-medium"
+                        activeSection === section ? "font-bold" : "font-medium"
                       }`}
+                      style={{
+                        color:
+                          activeSection === section
+                            ? "hsl(48 20% 20%)"
+                            : "hsl(48 3% 50%)",
+                      }}
                     >
                       <span
-                        className={`inline-block h-px transition-all duration-300 mr-4 ${
-                          activeSection === section
-                            ? "w-16 bg-foreground"
-                            : "w-8 bg-muted-foreground group-hover:w-16 group-hover:bg-foreground"
-                        }`}
+                        className="inline-block h-px transition-all duration-300 mr-4"
+                        style={{
+                          width: activeSection === section ? "64px" : "32px",
+                          backgroundColor:
+                            activeSection === section
+                              ? "hsl(48 20% 20%)"
+                              : "hsl(48 3% 50%)",
+                        }}
                       />
                       {section}
                     </button>
@@ -115,10 +131,11 @@ const Index = () => {
           {/* Social Links */}
           <div className="flex items-center gap-8">
             <a
-              href="https://github.com"
+              href="https://github.com/bkandh30"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-muted hover:text-cyan transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+              className="transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+              style={{ color: "hsl(48 3% 50%)" }}
               aria-label="GitHub"
             >
               <svg
@@ -131,10 +148,11 @@ const Index = () => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/kandharibhavya/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-muted hover:text-cyan transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+              className="transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+              style={{ color: "hsl(48 3% 50%)" }}
               aria-label="LinkedIn"
             >
               <svg
@@ -147,8 +165,9 @@ const Index = () => {
               </svg>
             </a>
             <a
-              href="mailto:hello@example.com"
-              className="text-slate-muted hover:text-cyan transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+              href="mailto:bhavya.kandhari.eng@gmail.com"
+              className="transition-all duration-300 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded"
+              style={{ color: "hsl(48 3% 50%)" }}
               aria-label="Email"
             >
               <Mail className="w-7 h-7" />
@@ -171,15 +190,20 @@ const Index = () => {
                 BK
               </AvatarFallback>
             </Avatar>
-            <h1 className="text-4xl font-bold text-slate mb-2">
+            <h1
+              className="text-4xl font-bold mb-2"
+              style={{ color: "hsl(48 20% 20%)" }}
+            >
               Bhavya Kandhari
             </h1>
-            <h2 className="text-lg font-semibold text-slate mb-4">
+            <h2
+              className="text-lg font-semibold mb-4"
+              style={{ color: "hsl(48 20% 20%)" }}
+            >
               Software Engineer
             </h2>
-            <p className="text-slate-muted mb-8">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-              quam.
+            <p className="mb-8" style={{ color: "hsl(48 3% 50%)" }}>
+              I build accessible, pixel-perfect digital experiences for the web.
             </p>
 
             {/* Social Links */}
@@ -188,7 +212,8 @@ const Index = () => {
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-muted hover:text-cyan transition-all duration-300 hover:scale-110"
+                className="transition-all duration-300 hover:scale-110"
+                style={{ color: "hsl(48 3% 50%)" }}
                 aria-label="GitHub"
               >
                 <svg
@@ -204,7 +229,8 @@ const Index = () => {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-muted hover:text-cyan transition-all duration-300 hover:scale-110"
+                className="transition-all duration-300 hover:scale-110"
+                style={{ color: "hsl(48 3% 50%)" }}
                 aria-label="LinkedIn"
               >
                 <svg
@@ -218,7 +244,8 @@ const Index = () => {
               </a>
               <a
                 href="mailto:hello@example.com"
-                className="text-slate-muted hover:text-cyan transition-all duration-300 hover:scale-110"
+                className="transition-all duration-300 hover:scale-110"
+                style={{ color: "hsl(48 3% 50%)" }}
                 aria-label="Email"
               >
                 <Mail className="w-7 h-7" />
@@ -226,39 +253,103 @@ const Index = () => {
             </div>
           </section>
 
-          {/* Content Sections - Will update later */}
+          {/* About Section */}
           <section id="about" className="scroll-mt-24">
-            <div className="text-slate">
-              <h2 className="text-2xl font-bold mb-4">About Section</h2>
-              <p className="text-slate-muted">Lorem ipsum dolor sit amet.</p>
+            <div
+              className="space-y-4 p-6 rounded-lg"
+              style={{
+                backgroundColor: "#ede9de",
+                border: "1px solid rgba(201, 100, 66, 0.2)",
+                minHeight: "200px",
+              }}
+            >
+              <p
+                style={{
+                  color: "#3d3929",
+                  fontSize: "16px",
+                  lineHeight: "1.6",
+                }}
+              >
+                I'm a developer passionate about crafting accessible,
+                pixel-perfect user interfaces that blend thoughtful design with
+                robust engineering. My favorite work lies at the intersection of
+                design and development, creating experiences that not only look
+                great but are meticulously built for performance and usability.
+              </p>
+              <p
+                style={{
+                  color: "#3d3929",
+                  fontSize: "16px",
+                  lineHeight: "1.6",
+                }}
+              >
+                In the past, I've had the opportunity to develop software across
+                a variety of settings — from advertising agencies and large
+                corporations to start-ups and small digital product studios. I
+                enjoy building products that make a difference in people's
+                lives.
+              </p>
+              <p
+                style={{
+                  color: "#3d3929",
+                  fontSize: "16px",
+                  lineHeight: "1.6",
+                }}
+              >
+                In my spare time, I'm usually exploring new technologies,
+                contributing to open source projects, or enjoying outdoor
+                activities.
+              </p>
+              <button
+                className="inline-flex items-center gap-2 mt-6 px-4 py-2 rounded transition-all duration-300 group"
+                style={{
+                  backgroundColor: "transparent",
+                  color: "#3d3929",
+                  border: "1px solid rgba(201, 100, 66, 0.4)",
+                }}
+              >
+                View Full Résumé
+                <ArrowUpRight
+                  className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  style={{ color: "#3d3929" }}
+                />
+              </button>
             </div>
           </section>
 
           <section id="experience" className="scroll-mt-24">
-            <div className="text-slate">
+            <div style={{ color: "hsl(48 20% 20%)" }}>
               <h2 className="text-2xl font-bold mb-4">Experience Section</h2>
-              <p className="text-slate-muted">Lorem ipsum dolor sit amet.</p>
+              <p style={{ color: "hsl(48 3% 50%)" }}>
+                Lorem ipsum dolor sit amet.
+              </p>
             </div>
           </section>
 
           <section id="skills" className="scroll-mt-24">
-            <div className="text-slate">
+            <div style={{ color: "hsl(48 20% 20%)" }}>
               <h2 className="text-2xl font-bold mb-4">Skills Section</h2>
-              <p className="text-slate-muted">Lorem ipsum dolor sit amet.</p>
+              <p style={{ color: "hsl(48 3% 50%)" }}>
+                Lorem ipsum dolor sit amet.
+              </p>
             </div>
           </section>
 
           <section id="education" className="scroll-mt-24">
-            <div className="text-slate">
+            <div style={{ color: "hsl(48 20% 20%)" }}>
               <h2 className="text-2xl font-bold mb-4">Education Section</h2>
-              <p className="text-slate-muted">Lorem ipsum dolor sit amet.</p>
+              <p style={{ color: "hsl(48 3% 50%)" }}>
+                Lorem ipsum dolor sit amet.
+              </p>
             </div>
           </section>
 
           <section id="projects" className="scroll-mt-24">
-            <div className="text-slate">
+            <div style={{ color: "hsl(48 20% 20%)" }}>
               <h2 className="text-2xl font-bold mb-4">Projects Section</h2>
-              <p className="text-slate-muted">Lorem ipsum dolor sit amet.</p>
+              <p style={{ color: "hsl(48 3% 50%)" }}>
+                Lorem ipsum dolor sit amet.
+              </p>
             </div>
           </section>
         </div>

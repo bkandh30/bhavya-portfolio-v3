@@ -1049,20 +1049,6 @@ const Index = () => {
                     >
                       Arizona State University · Tempe, Arizona
                     </p>
-                    <p
-                      style={{
-                        fontSize: "14px",
-                        color: "#83827d",
-                        lineHeight: "1.7",
-                        marginBottom: "16px",
-                      }}
-                    >
-                      Focused on core computer science subjects such as data
-                      structures and algorithms, databases, software engineering
-                      principles. Also focused on operating systems, theory of
-                      computation, computer architecture, compiler construction,
-                      distributed systems and computer networks.
-                    </p>
 
                     {/* Coursework */}
                     <div>
@@ -1232,20 +1218,6 @@ const Index = () => {
                       }}
                     >
                       Amity University · Noida, India
-                    </p>
-                    <p
-                      style={{
-                        fontSize: "14px",
-                        color: "#83827d",
-                        lineHeight: "1.7",
-                        marginBottom: "16px",
-                      }}
-                    >
-                      Focused on core computer science subjects such as data
-                      structures and algorithms, databases, software engineering
-                      principles. Also focused on operating systems, theory of
-                      computation, computer architecture, compiler construction,
-                      distributed systems and computer networks.
                     </p>
 
                     {/* Coursework */}

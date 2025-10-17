@@ -1422,7 +1422,7 @@ const Index = () => {
                       marginBottom: "8px",
                     }}
                   >
-                    URL Shortener Webapp
+                    Hash.ly - URL Shortener
                   </h3>
                   <p
                     style={{
@@ -1432,10 +1432,8 @@ const Index = () => {
                       marginBottom: "16px",
                     }}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Cupiditate ea impedit, quae quisquam, ipsa nostrum iure illo
-                    possimus voluptate quasi blanditiis molestias. Maiores ex
-                    commodi ducimus delectus adipisci asperiores suscipit.
+                    A modern, privacy-conscious URL shortener built with Next.js
+                    and TypeScript, designed for performance and simplicity.
                   </p>
 
                   {/* Tech Stack */}
@@ -1449,7 +1447,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill1
+                      Next.js
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1460,7 +1458,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill2
+                      TypeScript
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1471,7 +1469,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill3
+                      Turso
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1482,7 +1480,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill4
+                      Upstash Redis
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1493,7 +1491,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill5
+                      Drizzle
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1504,14 +1502,16 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill6
+                      Vercel
                     </span>
                   </div>
 
                   {/* Links */}
                   <div className="flex gap-4">
                     <a
-                      href="#"
+                      href="https://hash-ly.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
                       style={{
                         fontSize: "14px",
@@ -1523,7 +1523,9 @@ const Index = () => {
                       <ExternalLink className="w-4 h-4" />
                     </a>
                     <a
-                      href="#"
+                      href="https://github.com/bkandh30/hash.ly"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
                       style={{
                         fontSize: "14px",

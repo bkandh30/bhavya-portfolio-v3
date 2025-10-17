@@ -1801,10 +1801,8 @@ const Index = () => {
                       marginBottom: "16px",
                     }}
                   >
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
-                    eum vel magni eaque non explicabo similique quis consequatur
-                    neque qui, dicta facilis! Nesciunt repudiandae asperiores
-                    dolores. In dicta distinctio repellendus.
+                    A lightweight Python microservice that summarizes text
+                    asynchronously using NLP pipelines and task queues.
                   </p>
 
                   {/* Tech Stack */}
@@ -1818,7 +1816,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill1
+                      Python
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1829,7 +1827,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill2
+                      FastAPI
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1840,7 +1838,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill3
+                      Celery
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1851,7 +1849,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill4
+                      Docker
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1862,14 +1860,27 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill5
+                      AsyncIO
+                    </span>
+                    <span
+                      className="px-3 py-1.5 rounded-full"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "rgba(201, 100, 66, 0.1)",
+                        color: "#c96442",
+                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                      }}
+                    >
+                      NLTK
                     </span>
                   </div>
 
                   {/* Links */}
                   <div className="flex gap-4">
                     <a
-                      href="#"
+                      href="https://github.com/bkandh30/fastAPI-summary"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
                       style={{
                         fontSize: "14px",

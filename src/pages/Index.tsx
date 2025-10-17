@@ -1554,7 +1554,7 @@ const Index = () => {
                       marginBottom: "8px",
                     }}
                   >
-                    Metered API Server
+                    Metered API Server (Rust)
                   </h3>
                   <p
                     style={{
@@ -1564,10 +1564,9 @@ const Index = () => {
                       marginBottom: "16px",
                     }}
                   >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-                    consequatur magnam quia soluta aperiam cum animi optio
-                    distinctio a voluptate, sit voluptates totam sapiente
-                    recusandae mollitia itaque voluptatibus excepturi aliquid?
+                    A production-ready API server built in Rust, designed to
+                    handle usage tracking, quotas, and rate limiting with
+                    reliability at scale.
                   </p>
 
                   {/* Tech Stack */}
@@ -1581,7 +1580,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill1
+                      Rust
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1592,7 +1591,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill2
+                      Warp
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1603,7 +1602,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill3
+                      SQLx
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1614,7 +1613,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill4
+                      Docker
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1625,7 +1624,7 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill5
+                      PostgreSQL
                     </span>
                     <span
                       className="px-3 py-1.5 rounded-full"
@@ -1636,14 +1635,16 @@ const Index = () => {
                         border: "1px solid rgba(201, 100, 66, 0.2)",
                       }}
                     >
-                      Skill6
+                      Github Actions
                     </span>
                   </div>
 
                   {/* Links */}
                   <div className="flex gap-4">
                     <a
-                      href="#"
+                      href="https://github.com/bkandh30/metered-finance-api"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
                       style={{
                         fontSize: "14px",

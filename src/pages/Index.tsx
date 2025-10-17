@@ -117,7 +117,8 @@ const Index = () => {
             Software Engineer
           </h2>
           <p className="mb-8" style={{ color: "hsl(48 3% 50%)" }}>
-            I build accessible, pixel-perfect digital experiences for the web.
+            I build reliable, accessible, and scalable systems that power
+            seamless digital experiences.
           </p>
 
           {/* Navigation */}

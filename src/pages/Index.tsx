@@ -1712,9 +1712,40 @@ const Index = () => {
 
               {/* Project 2 */}
               <div
-                className="group relative p-6 rounded-lg transition-all duration-300 hover:bg-[#ede9de]/50"
+                className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
                 style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#ede9de";
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.boxShadow =
+                    "0 8px 16px rgba(201, 100, 66, 0.1)";
+                  const title = e.currentTarget.querySelector("h3");
+                  if (title) (title as HTMLElement).style.color = "#c96442";
+                  const borderLine =
+                    e.currentTarget.querySelector(".border-accent");
+                  if (borderLine)
+                    (borderLine as HTMLElement).style.height = "80px";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "none";
+                  const title = e.currentTarget.querySelector("h3");
+                  if (title) (title as HTMLElement).style.color = "#3d3929";
+                  const borderLine =
+                    e.currentTarget.querySelector(".border-accent");
+                  if (borderLine)
+                    (borderLine as HTMLElement).style.height = "0px";
+                }}
               >
+                {/* Left border accent */}
+                <span
+                  className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
+                  style={{
+                    height: "0px",
+                    backgroundColor: "#c96442",
+                  }}
+                />
                 <div className="flex flex-col">
                   <h3
                     style={{

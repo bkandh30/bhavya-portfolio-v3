@@ -325,14 +325,18 @@ const Index = () => {
                 Lately, I’ve been experimenting with Rust, Go, and TypeScript —
                 pushing my craft toward building faster, more resilient systems.
               </p>
-              <button
-                className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-xl transition-all duration-300 group backdrop-blur-sm"
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-xl transition-all duration-300 group backdrop-blur-sm cursor-pointer"
                 style={{
                   background: "rgba(201, 100, 66, 0.1)",
                   border: "1px solid rgba(201, 100, 66, 0.3)",
                   color: "#c96442",
                   fontWeight: "600",
                   boxShadow: "0 4px 12px rgba(201, 100, 66, 0.08)",
+                  textDecoration: "none",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = "#c96442";
@@ -353,7 +357,7 @@ const Index = () => {
               >
                 View Full Résumé
                 <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </button>
+              </a>
             </div>
           </section>
 

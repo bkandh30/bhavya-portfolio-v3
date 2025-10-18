@@ -7,32 +7,41 @@ const Index = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "about",
-        "experience",
-        "skills",
-        "education",
-        "projects",
-      ];
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+    let ticking = false;
 
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
-            setActiveSection(section);
-            break;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const sections = [
+            "about",
+            "experience",
+            "skills",
+            "education",
+            "projects",
+          ];
+          const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+          for (const section of sections) {
+            const element = document.getElementById(section);
+            if (element) {
+              const { offsetTop, offsetHeight } = element;
+              if (
+                scrollPosition >= offsetTop &&
+                scrollPosition < offsetTop + offsetHeight
+              ) {
+                setActiveSection(section);
+                break;
+              }
+            }
           }
-        }
+
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

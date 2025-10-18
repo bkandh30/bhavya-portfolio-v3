@@ -95,12 +95,19 @@ const Index = () => {
       {/* Fixed Sidebar - Only on large screens */}
       <aside className="hidden lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:w-[45%] lg:flex lg:items-center lg:justify-center lg:p-24">
         <div className="max-w-md w-full">
-          <Avatar className="h-28 w-28 mb-6 ring-1 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg">
-            <AvatarImage src="/headshot.png" alt="Profile" />
-            <AvatarFallback className="text-2xl font-bold bg-primary/10 text-primary">
-              BK
-            </AvatarFallback>
-          </Avatar>
+          <div className="relative h-28 w-28 mb-6 ring-1 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg rounded-full overflow-hidden">
+            <picture>
+              <source srcSet="/headshot-small.webp" type="image/webp" />
+              <img
+                src="/headshot-small.png"
+                alt="Bhavya Kandhari profile photo"
+                width={112}
+                height={112}
+                className="object-cover w-full h-full"
+                loading="eager"
+              />
+            </picture>
+          </div>
           <h1
             className="text-5xl font-bold mb-2"
             style={{ color: "hsl(48 20% 20%)" }}
@@ -207,12 +214,19 @@ const Index = () => {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 space-y-12 sm:space-y-16">
           {/* Mobile Hero - Only visible on small screens */}
           <section className="lg:hidden">
-            <Avatar className="h-24 w-24 mb-6 ring-2 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg">
-              <AvatarImage src="/headshot.png" alt="Profile" />
-              <AvatarFallback className="text-xl font-bold bg-primary/10 text-primary">
-                BK
-              </AvatarFallback>
-            </Avatar>
+            <div className="relative h-24 w-24 mb-6 ring-2 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg rounded-full overflow-hidden">
+              <picture>
+                <source srcSet="/headshot-small.webp" type="image/webp" />
+                <img
+                  src="/headshot-small.png"
+                  alt="Bhavya Kandhari profile photo"
+                  width={96}
+                  height={96}
+                  className="object-cover w-full h-full"
+                  loading="eager"
+                />
+              </picture>
+            </div>
             <h1
               className="text-4xl font-bold mb-2"
               style={{ color: "hsl(48 20% 20%)" }}

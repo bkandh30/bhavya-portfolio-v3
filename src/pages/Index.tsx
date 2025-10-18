@@ -279,6 +279,19 @@ const Index = () => {
 
           {/* About Section */}
           <section id="about" className="scroll-mt-24">
+            <h2
+              className="text-xs uppercase tracking-widest font-bold mb-6 flex items-center"
+              style={{ color: "hsl(48 20% 20%)" }}
+            >
+              <span
+                className="inline-block h-px mr-4"
+                style={{
+                  width: "64px",
+                  backgroundColor: "hsl(48 20% 20%)",
+                }}
+              />
+              About
+            </h2>
             <div
               className="space-y-4 p-6 rounded-lg"
               style={{
@@ -363,6 +376,19 @@ const Index = () => {
 
           {/* Experience Section */}
           <section id="experience" className="scroll-mt-24">
+            <h2
+              className="text-xs uppercase tracking-widest font-bold mb-6 flex items-center"
+              style={{ color: "hsl(48 20% 20%)" }}
+            >
+              <span
+                className="inline-block h-px mr-4"
+                style={{
+                  width: "64px",
+                  backgroundColor: "hsl(48 20% 20%)",
+                }}
+              />
+              Experience
+            </h2>
             <div className="space-y-8">
               {/* Experience Item 1 */}
               <div
@@ -644,6 +670,19 @@ const Index = () => {
 
           {/* Skills Section */}
           <section id="skills" className="scroll-mt-24">
+            <h2
+              className="text-xs uppercase tracking-widest font-bold mb-6 flex items-center"
+              style={{ color: "hsl(48 20% 20%)" }}
+            >
+              <span
+                className="inline-block h-px mr-4"
+                style={{
+                  width: "64px",
+                  backgroundColor: "hsl(48 20% 20%)",
+                }}
+              />
+              Skills
+            </h2>
             <div className="space-y-6">
               {/* Languages */}
               <div>
@@ -1146,6 +1185,19 @@ const Index = () => {
 
           {/* Education Section */}
           <section id="education" className="scroll-mt-24">
+            <h2
+              className="text-xs uppercase tracking-widest font-bold mb-6 flex items-center"
+              style={{ color: "hsl(48 20% 20%)" }}
+            >
+              <span
+                className="inline-block h-px mr-4"
+                style={{
+                  width: "64px",
+                  backgroundColor: "hsl(48 20% 20%)",
+                }}
+              />
+              Education
+            </h2>
             <div className="space-y-8">
               {/* Education Item 1 */}
               <div
@@ -1544,6 +1596,19 @@ const Index = () => {
 
           {/* Projects Section */}
           <section id="projects" className="scroll-mt-24">
+            <h2
+              className="text-xs uppercase tracking-widest font-bold mb-6 flex items-center"
+              style={{ color: "hsl(48 20% 20%)" }}
+            >
+              <span
+                className="inline-block h-px mr-4"
+                style={{
+                  width: "64px",
+                  backgroundColor: "hsl(48 20% 20%)",
+                }}
+              />
+              Projects
+            </h2>
             <div className="space-y-8">
               {/* Project 1 */}
               <div

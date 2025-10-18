@@ -238,4 +238,15 @@
   .group:hover .timeline-line {
     opacity: 1;
   }
+
+    /* Mobile performance optimizations */
+    .hover-lift,
+    .fade-in-section {
+      will-change: transform;
+    }
+    
+    /* Reset after animation completes */
+    .fade-in-section.is-visible {
+      will-change: auto;
+    }
 }

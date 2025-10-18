@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "./font.css";
+/* Import self-hosted fonts */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -205,7 +207,7 @@
     box-shadow: 0 0 20px hsl(var(--cyan-glow));
   }
 
-  /* Phase 13: Fade-in Animation Styles */
+  /* Fade-in Animation Styles */
   .fade-in-section {
     opacity: 0;
     transform: translateY(20px);

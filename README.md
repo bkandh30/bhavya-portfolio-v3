@@ -50,7 +50,7 @@ It is not affiliated with or endorsed by Brittany Chiang.
 1. Clone the repository:
 
 ```bash
-git clone
+git clone https://github.com/bkandh30/bhavya-portfolio-v3.git
 cd your-portfolio
 ```
 

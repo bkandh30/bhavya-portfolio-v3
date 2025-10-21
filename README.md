@@ -51,7 +51,7 @@ It is not affiliated with or endorsed by Brittany Chiang.
 
 ```bash
 git clone https://github.com/bkandh30/bhavya-portfolio-v3.git
-cd your-portfolio
+cd bhavya-portfolio-v3
 ```
 
 2. Install dependencies:

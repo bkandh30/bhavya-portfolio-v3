@@ -120,8 +120,8 @@ const Index = () => {
             <picture>
               <source srcSet="/headshot-small.webp" type="image/webp" />
               <img
-                src="/headshot-small.png"
-                alt="Bhavya Kandhari profile photo"
+                src={personalInfo.avatar.png}
+                alt={personalInfo.avatar.alt}
                 width={112}
                 height={112}
                 className="object-cover w-full h-full"
@@ -373,7 +373,7 @@ const Index = () => {
                 pushing my craft toward building faster, more resilient systems.
               </p>
               <a
-                href="/resume.pdf"
+                href={personalInfo.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-xl transition-all duration-300 group backdrop-blur-sm cursor-pointer"

@@ -238,8 +238,8 @@ const Index = () => {
               <picture>
                 <source srcSet="/headshot-small.webp" type="image/webp" />
                 <img
-                  src="/headshot-small.png"
-                  alt="Bhavya Kandhari profile photo"
+                  src={personalInfo.avatar.png}
+                  alt={personalInfo.avatar.alt}
                   width={96}
                   height={96}
                   className="object-cover w-full h-full"
@@ -251,17 +251,16 @@ const Index = () => {
               className="text-4xl font-bold mb-2"
               style={{ color: "hsl(48 20% 20%)" }}
             >
-              Bhavya Kandhari
+              {personalInfo.name}
             </h1>
             <h2
               className="text-lg font-semibold mb-4"
               style={{ color: "hsl(48 20% 20%)" }}
             >
-              Software Engineer
+              {personalInfo.title}
             </h2>
             <p className="mb-8" style={{ color: "hsl(48 3% 50%)" }}>
-              I build reliable, accessible, and scalable systems that power
-              seamless digital experiences.
+              {personalInfo.bio}
             </p>
 
             {/* Social Links */}

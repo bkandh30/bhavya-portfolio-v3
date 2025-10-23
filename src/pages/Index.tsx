@@ -5,7 +5,7 @@ import { experiences } from "@/data/experience";
 import { education } from "@/data/education";
 import { skillCategories } from "@/data/skills";
 import { projects } from "@/data/projects";
-import { Footer } from "@/components/layout/footer";
+import { Footer } from "@/components/layout/Footer";
 
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 

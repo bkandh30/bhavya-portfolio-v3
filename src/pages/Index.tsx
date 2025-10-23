@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Mail, ArrowUpRight, ExternalLink } from "lucide-react";
 import { personalInfo } from "@/data/personal";
 import { experiences } from "@/data/experience";
+import { education } from "@/data/education";
 
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -1044,398 +1045,113 @@ const Index = () => {
               Education
             </h2>
             <div className="space-y-8">
-              {/* Education Item 1 */}
-              <div
-                className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
-                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ede9de";
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 16px rgba(201, 100, 66, 0.1)";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#c96442";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "80px";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#3d3929";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "0px";
-                }}
-              >
-                {/* Left border accent */}
-                <span
-                  className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
-                  style={{
-                    height: "0px",
-                    backgroundColor: "#c96442",
+              {education.map((edu) => (
+                <div
+                  key={edu.id}
+                  className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
+                  style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#ede9de";
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 8px 16px rgba(201, 100, 66, 0.1)";
+                    const title = e.currentTarget.querySelector("h3");
+                    if (title) (title as HTMLElement).style.color = "#c96442";
+                    const borderLine =
+                      e.currentTarget.querySelector(".border-accent");
+                    if (borderLine)
+                      (borderLine as HTMLElement).style.height = "80px";
                   }}
-                />
-                <div className="flex flex-col md:flex-row md:gap-8">
-                  {/* Date Column */}
-                  <div className="md:w-1/4 mb-2 md:mb-0">
-                    <span
-                      style={{
-                        fontSize: "12px",
-                        color: "#83827d",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.05em",
-                      }}
-                    >
-                      2023 — 2025
-                    </span>
-                  </div>
-
-                  {/* Content Column */}
-                  <div className="md:w-3/4">
-                    <h3
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        color: "#3d3929",
-                        marginBottom: "8px",
-                      }}
-                    >
-                      Masters of Computer Science
-                    </h3>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        color: "#83827d",
-                        marginBottom: "12px",
-                      }}
-                    >
-                      Arizona State University · Tempe, Arizona
-                    </p>
-
-                    {/* Coursework */}
-                    <div>
-                      <p
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                    const title = e.currentTarget.querySelector("h3");
+                    if (title) (title as HTMLElement).style.color = "#3d3929";
+                    const borderLine =
+                      e.currentTarget.querySelector(".border-accent");
+                    if (borderLine)
+                      (borderLine as HTMLElement).style.height = "0px";
+                  }}
+                >
+                  {/* Left border accent */}
+                  <span
+                    className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
+                    style={{
+                      height: "0px",
+                      backgroundColor: "#c96442",
+                    }}
+                  />
+                  <div className="flex flex-col md:flex-row md:gap-8">
+                    {/* Date Column */}
+                    <div className="md:w-1/4 mb-2 md:mb-0">
+                      <span
                         style={{
-                          fontSize: "13px",
+                          fontSize: "12px",
+                          color: "#83827d",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.05em",
+                        }}
+                      >
+                        {edu.dateRange}
+                      </span>
+                    </div>
+
+                    {/* Content Column */}
+                    <div className="md:w-3/4">
+                      <h3
+                        style={{
+                          fontSize: "18px",
                           fontWeight: "600",
                           color: "#3d3929",
                           marginBottom: "8px",
                         }}
                       >
-                        Relevant Coursework:
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Digital Video Processing
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Foundations of Algorithm
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Distributed Software Development
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Software Security
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Information Assurance and Security
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Cloud Computing
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Software Verification, Validation and Testing
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Data Mining
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Data Processing at Scale
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Applied Cryptography
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Education Item 2 */}
-              <div
-                className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
-                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ede9de";
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 16px rgba(201, 100, 66, 0.1)";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#c96442";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "80px";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#3d3929";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "0px";
-                }}
-              >
-                {/* Left border accent */}
-                <span
-                  className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
-                  style={{
-                    height: "0px",
-                    backgroundColor: "#c96442",
-                  }}
-                />
-                <div className="flex flex-col md:flex-row md:gap-8">
-                  {/* Date Column */}
-                  <div className="md:w-1/4 mb-2 md:mb-0">
-                    <span
-                      style={{
-                        fontSize: "12px",
-                        color: "#83827d",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.05em",
-                      }}
-                    >
-                      2017 — 2021
-                    </span>
-                  </div>
-
-                  {/* Content Column */}
-                  <div className="md:w-3/4">
-                    <h3
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        color: "#3d3929",
-                        marginBottom: "8px",
-                      }}
-                    >
-                      Bachelor of Technology in Computer Science
-                    </h3>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        color: "#83827d",
-                        marginBottom: "12px",
-                      }}
-                    >
-                      Amity University · Noida, India
-                    </p>
-
-                    {/* Coursework */}
-                    <div>
+                        {edu.degree}
+                      </h3>
                       <p
                         style={{
-                          fontSize: "13px",
-                          fontWeight: "600",
-                          color: "#3d3929",
-                          marginBottom: "8px",
+                          fontSize: "15px",
+                          color: "#83827d",
+                          marginBottom: "12px",
                         }}
                       >
-                        Relevant Coursework:
+                        {edu.institution} · {edu.location}
                       </p>
-                      <div className="flex flex-wrap gap-2">
-                        <span
-                          className="px-3 py-1.5 rounded-full"
+
+                      {/* Coursework */}
+                      <div>
+                        <p
                           style={{
                             fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                            fontWeight: "600",
+                            color: "#3d3929",
+                            marginBottom: "8px",
                           }}
                         >
-                          Data Structures and Algorithms
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Database Management Systems
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Object Oriented Programming
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Theory of Computation
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Operating System
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Computer Networks
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Distributed Systems
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Computer Architecture
-                        </span>
-                        <span
-                          className="px-3 py-1.5 rounded-full"
-                          style={{
-                            fontSize: "13px",
-                            backgroundColor: "rgba(201, 100, 66, 0.1)",
-                            color: "#c96442",
-                            border: "1px solid rgba(201, 100, 66, 0.2)",
-                          }}
-                        >
-                          Compiler Construction
-                        </span>
+                          Relevant Coursework:
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {edu.coursework.map((course) => (
+                            <span
+                              key={course}
+                              className="px-3 py-1.5 rounded-full"
+                              style={{
+                                fontSize: "13px",
+                                backgroundColor: "rgba(201, 100, 66, 0.1)",
+                                color: "#c96442",
+                                border: "1px solid rgba(201, 100, 66, 0.2)",
+                              }}
+                            >
+                              {course}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </section>
 

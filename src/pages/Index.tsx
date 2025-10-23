@@ -4,6 +4,7 @@ import { personalInfo } from "@/data/personal";
 import { experiences } from "@/data/experience";
 import { education } from "@/data/education";
 import { skillCategories } from "@/data/skills";
+import { projects } from "@/data/projects";
 
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -707,767 +708,124 @@ const Index = () => {
               />
               Projects
             </h2>
+
             <div className="space-y-8">
-              {/* Project 1 */}
-              <div
-                className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
-                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ede9de";
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 16px rgba(201, 100, 66, 0.1)";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#c96442";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "80px";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#3d3929";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "0px";
-                }}
-              >
-                {/* Left border accent */}
-                <span
-                  className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
-                  style={{
-                    height: "0px",
-                    backgroundColor: "#c96442",
+              {projects.map((project) => (
+                <div
+                  key={project.id}
+                  className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
+                  style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#ede9de";
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 8px 16px rgba(201, 100, 66, 0.1)";
+                    const title = e.currentTarget.querySelector("h3");
+                    if (title) (title as HTMLElement).style.color = "#c96442";
+                    const borderLine =
+                      e.currentTarget.querySelector(".border-accent");
+                    if (borderLine)
+                      (borderLine as HTMLElement).style.height = "80px";
                   }}
-                />
-                <div className="flex flex-col">
-                  <h3
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                    const title = e.currentTarget.querySelector("h3");
+                    if (title) (title as HTMLElement).style.color = "#3d3929";
+                    const borderLine =
+                      e.currentTarget.querySelector(".border-accent");
+                    if (borderLine)
+                      (borderLine as HTMLElement).style.height = "0px";
+                  }}
+                >
+                  {/* Left border accent */}
+                  <span
+                    className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
                     style={{
-                      fontSize: "18px",
-                      fontWeight: "600",
-                      color: "#3d3929",
-                      marginBottom: "8px",
+                      height: "0px",
+                      backgroundColor: "#c96442",
                     }}
-                  >
-                    Hash.ly - URL Shortener
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      color: "#83827d",
-                      lineHeight: "1.7",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    A modern, privacy-conscious URL shortener built with Next.js
-                    and TypeScript, designed for performance and simplicity.
-                  </p>
+                  />
 
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span
-                      className="px-3 py-1.5 rounded-full"
+                  <div className="flex flex-col">
+                    <h3
                       style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
+                        fontSize: "18px",
+                        fontWeight: "600",
+                        color: "#3d3929",
+                        marginBottom: "8px",
                       }}
                     >
-                      Next.js
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      TypeScript
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Turso
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Upstash Redis
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Drizzle
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Vercel
-                    </span>
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex gap-4">
-                    <a
-                      href="https://hash-ly.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+                      {project.title}
+                    </h3>
+                    <p
                       style={{
                         fontSize: "14px",
-                        color: "#c96442",
-                        fontWeight: "500",
+                        color: "#83827d",
+                        lineHeight: "1.7",
+                        marginBottom: "16px",
                       }}
                     >
-                      <span>View Project</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                    <a
-                      href="https://github.com/bkandh30/hash.ly"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
-                      style={{
-                        fontSize: "14px",
-                        color: "#c96442",
-                        fontWeight: "500",
-                      }}
-                    >
-                      <span>GitHub</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
+                      {project.description}
+                    </p>
+
+                    {/* Tech Stack */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1.5 rounded-full"
+                          style={{
+                            fontSize: "13px",
+                            backgroundColor: "rgba(201, 100, 66, 0.1)",
+                            color: "#c96442",
+                            border: "1px solid rgba(201, 100, 66, 0.2)",
+                          }}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Links */}
+                    <div className="flex gap-4">
+                      {project.links.demo && (
+                        <a
+                          href={project.links.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+                          style={{
+                            fontSize: "14px",
+                            color: "#c96442",
+                            fontWeight: "500",
+                          }}
+                        >
+                          <span>View Project</span>
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      )}
+                      {project.links.github && (
+                        <a
+                          href={project.links.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+                          style={{
+                            fontSize: "14px",
+                            color: "#c96442",
+                            fontWeight: "500",
+                          }}
+                        >
+                          <span>GitHub</span>
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Project 2 */}
-              <div
-                className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
-                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ede9de";
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 16px rgba(201, 100, 66, 0.1)";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#c96442";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "80px";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#3d3929";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "0px";
-                }}
-              >
-                {/* Left border accent */}
-                <span
-                  className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
-                  style={{
-                    height: "0px",
-                    backgroundColor: "#c96442",
-                  }}
-                />
-                <div className="flex flex-col">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "600",
-                      color: "#3d3929",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    Metered API Server (Rust)
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      color: "#83827d",
-                      lineHeight: "1.7",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    A production-ready API server built in Rust, designed to
-                    handle usage tracking, quotas, and rate limiting with
-                    reliability at scale.
-                  </p>
-
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Rust
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Warp
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      SQLx
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Docker
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      PostgreSQL
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Github Actions
-                    </span>
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex gap-4">
-                    <a
-                      href="https://github.com/bkandh30/metered-finance-api"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
-                      style={{
-                        fontSize: "14px",
-                        color: "#c96442",
-                        fontWeight: "500",
-                      }}
-                    >
-                      <span>GitHub</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Project 3 */}
-              <div
-                className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
-                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ede9de";
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 16px rgba(201, 100, 66, 0.1)";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#c96442";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "80px";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#3d3929";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "0px";
-                }}
-              >
-                {/* Left border accent */}
-                <span
-                  className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
-                  style={{
-                    height: "0px",
-                    backgroundColor: "#c96442",
-                  }}
-                />
-                <div className="flex flex-col">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "600",
-                      color: "#3d3929",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    GoFlix - RESTful Movie Management API
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      color: "#83827d",
-                      lineHeight: "1.7",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    A backend service written in Go for managing movie data,
-                    built with performance, security and observability in mind.
-                  </p>
-
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Go
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      PostgreSQL
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      JWT
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Docker
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Logging
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Metrics
-                    </span>
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex gap-4">
-                    <a
-                      href="https://github.com/bkandh30/GoFlix"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
-                      style={{
-                        fontSize: "14px",
-                        color: "#c96442",
-                        fontWeight: "500",
-                      }}
-                    >
-                      <span>GitHub</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Project 4 */}
-              <div
-                className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
-                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ede9de";
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 16px rgba(201, 100, 66, 0.1)";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#c96442";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "80px";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#3d3929";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "0px";
-                }}
-              >
-                {/* Left border accent */}
-                <span
-                  className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
-                  style={{
-                    height: "0px",
-                    backgroundColor: "#c96442",
-                  }}
-                />
-                <div className="flex flex-col">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "600",
-                      color: "#3d3929",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    Async Text Summarization Microservice
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      color: "#83827d",
-                      lineHeight: "1.7",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    A lightweight Python microservice that summarizes text
-                    asynchronously using NLP pipelines and task queues.
-                  </p>
-
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Python
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      FastAPI
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Celery
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Docker
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      AsyncIO
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      NLTK
-                    </span>
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex gap-4">
-                    <a
-                      href="https://github.com/bkandh30/fastAPI-summary"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
-                      style={{
-                        fontSize: "14px",
-                        color: "#c96442",
-                        fontWeight: "500",
-                      }}
-                    >
-                      <span>GitHub</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Project 5 */}
-              <div
-                className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
-                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ede9de";
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 16px rgba(201, 100, 66, 0.1)";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#c96442";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "80px";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#3d3929";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "0px";
-                }}
-              >
-                {/* Left border accent */}
-                <span
-                  className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
-                  style={{
-                    height: "0px",
-                    backgroundColor: "#c96442",
-                  }}
-                />
-                <div className="flex flex-col">
-                  <h3
-                    style={{
-                      fontSize: "18px",
-                      fontWeight: "600",
-                      color: "#3d3929",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    AWS Cloud Resume Challenge
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "14px",
-                      color: "#83827d",
-                      lineHeight: "1.7",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    An end-to-end serverless project combining infrastructure as
-                    code, continuous deployment, and a data-driven visitor
-                    counter.
-                  </p>
-
-                  {/* Tech Stack */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      AWS
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      Lambda
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      DynamoDB
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      S3
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      CloudFront
-                    </span>
-                    <span
-                      className="px-3 py-1.5 rounded-full"
-                      style={{
-                        fontSize: "13px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                        border: "1px solid rgba(201, 100, 66, 0.2)",
-                      }}
-                    >
-                      CI/CD
-                    </span>
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex gap-4">
-                    <a
-                      href="https://github.com/bkandh30/AWS-Cloud-Resume-Challenge"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
-                      style={{
-                        fontSize: "14px",
-                        color: "#c96442",
-                        fontWeight: "500",
-                      }}
-                    >
-                      <span>GitHub</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
 

@@ -8,13 +8,6 @@ export const ProjectsSection = () => {
         className="text-xs uppercase tracking-widest font-bold mb-6 flex items-center"
         style={{ color: "hsl(48 20% 20%)" }}
       >
-        <span
-          className="inline-block h-px mr-4"
-          style={{
-            width: "64px",
-            backgroundColor: "hsl(48 20% 20%)",
-          }}
-        />
         Projects
       </h2>
       <div className="space-y-8">

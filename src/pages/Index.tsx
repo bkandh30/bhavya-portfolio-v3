@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Mail, ArrowUpRight, ExternalLink } from "lucide-react";
+import { personalInfo } from "@/data/personal";
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Index = () => {
@@ -132,17 +133,16 @@ const Index = () => {
             className="text-5xl font-bold mb-2"
             style={{ color: "hsl(48 20% 20%)" }}
           >
-            Bhavya Kandhari
+            {personalInfo.name}
           </h1>
           <h2
             className="text-xl font-semibold mb-4"
             style={{ color: "hsl(48 20% 20%)" }}
           >
-            Software Engineer
+            {personalInfo.title}
           </h2>
           <p className="mb-8" style={{ color: "hsl(48 3% 50%)" }}>
-            I build reliable, accessible, and scalable systems that power
-            seamless digital experiences.
+            {personalInfo.bio}
           </p>
 
           {/* Navigation */}

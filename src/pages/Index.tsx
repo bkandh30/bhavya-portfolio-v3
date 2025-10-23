@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
-import { personalInfo } from "@/data/personal";
+import { ExternalLink } from "lucide-react";
 import { experiences } from "@/data/experience";
 import { education } from "@/data/education";
 import { skillCategories } from "@/data/skills";

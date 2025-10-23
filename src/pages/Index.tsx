@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Mail, ArrowUpRight, ExternalLink } from "lucide-react";
 import { personalInfo } from "@/data/personal";
+import { experiences } from "@/data/experience";
+
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const Index = () => {
@@ -413,281 +415,101 @@ const Index = () => {
               Experience
             </h2>
             <div className="space-y-8">
-              {/* Experience Item 1 */}
-              <div
-                className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
-                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ede9de";
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 16px rgba(201, 100, 66, 0.1)";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#c96442";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "80px";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#3d3929";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "0px";
-                }}
-              >
-                {/* Left border accent */}
-                <span
-                  className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
-                  style={{
-                    height: "0px",
-                    backgroundColor: "#c96442",
+              {experiences.map((exp) => (
+                <div
+                  key={exp.id}
+                  className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
+                  style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#ede9de";
+                    e.currentTarget.style.transform = "translateY(-4px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 8px 16px rgba(201, 100, 66, 0.1)";
+                    const title = e.currentTarget.querySelector("h3");
+                    if (title) (title as HTMLElement).style.color = "#c96442";
+                    const borderLine =
+                      e.currentTarget.querySelector(".border-accent");
+                    if (borderLine)
+                      (borderLine as HTMLElement).style.height = "80px";
                   }}
-                />
-                <div className="flex flex-col md:flex-row md:gap-8">
-                  {/* Date Column */}
-                  <div className="md:w-1/4 mb-2 md:mb-0">
-                    <span
-                      style={{
-                        fontSize: "12px",
-                        color: "#83827d",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.05em",
-                      }}
-                    >
-                      2023 — 2025
-                    </span>
-                  </div>
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "transparent";
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                    const title = e.currentTarget.querySelector("h3");
+                    if (title) (title as HTMLElement).style.color = "#3d3929";
+                    const borderLine =
+                      e.currentTarget.querySelector(".border-accent");
+                    if (borderLine)
+                      (borderLine as HTMLElement).style.height = "0px";
+                  }}
+                >
+                  {/* Left border accent */}
+                  <span
+                    className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
+                    style={{
+                      height: "0px",
+                      backgroundColor: "#c96442",
+                    }}
+                  />
+                  <div className="flex flex-col md:flex-row md:gap-8">
+                    {/* Date Column */}
+                    <div className="md:w-1/4 mb-2 md:mb-0">
+                      <span
+                        style={{
+                          fontSize: "12px",
+                          color: "#83827d",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.05em",
+                        }}
+                      >
+                        {exp.dateRange}
+                      </span>
+                    </div>
 
-                  {/* Content Column */}
-                  <div className="md:w-3/4">
-                    <h3
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        color: "#3d3929",
-                        marginBottom: "8px",
-                      }}
-                    >
-                      Software Engineer · Ira A Fulton School of Engineering
-                    </h3>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        color: "#83827d",
-                        lineHeight: "1.7",
-                        marginBottom: "16px",
-                      }}
-                    >
-                      At ASU, I built automation tools and validation pipelines
-                      to help scale distributed computing coursework for
-                      hundreds of students each semester.
-                    </p>
+                    {/* Content Column */}
+                    <div className="md:w-3/4">
+                      <h3
+                        style={{
+                          fontSize: "18px",
+                          fontWeight: "600",
+                          color: "#3d3929",
+                          marginBottom: "8px",
+                        }}
+                      >
+                        {exp.role} · {exp.company}
+                      </h3>
+                      <p
+                        style={{
+                          fontSize: "15px",
+                          color: "#83827d",
+                          lineHeight: "1.7",
+                          marginBottom: "16px",
+                        }}
+                      >
+                        {exp.description}
+                      </p>
 
-                    {/* Skills */}
-                    <div className="flex flex-wrap gap-2">
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        Python
-                      </span>
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        C#
-                      </span>
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        Pytest
-                      </span>
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        REST APIs
-                      </span>
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        Distributed Systems
-                      </span>
+                      {/* Skills */}
+                      <div className="flex flex-wrap gap-2">
+                        {exp.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-3 py-1 rounded-full"
+                            style={{
+                              fontSize: "12px",
+                              backgroundColor: "rgba(201, 100, 66, 0.1)",
+                              color: "#c96442",
+                            }}
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Experience Item 2 */}
-              <div
-                className="group relative p-6 rounded-lg transition-all duration-300 overflow-hidden"
-                style={{ border: "1px solid rgba(201, 100, 66, 0.1)" }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "#ede9de";
-                  e.currentTarget.style.transform = "translateY(-4px)";
-                  e.currentTarget.style.boxShadow =
-                    "0 8px 16px rgba(201, 100, 66, 0.1)";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#c96442";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "80px";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = "transparent";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                  const title = e.currentTarget.querySelector("h3");
-                  if (title) (title as HTMLElement).style.color = "#3d3929";
-                  const borderLine =
-                    e.currentTarget.querySelector(".border-accent");
-                  if (borderLine)
-                    (borderLine as HTMLElement).style.height = "0px";
-                }}
-              >
-                {/* Left border accent */}
-                <span
-                  className="border-accent absolute top-0 left-0 w-1 transition-all duration-300"
-                  style={{
-                    height: "0px",
-                    backgroundColor: "#c96442",
-                  }}
-                />
-                <div className="flex flex-col md:flex-row md:gap-8">
-                  {/* Date Column */}
-                  <div className="md:w-1/4 mb-2 md:mb-0">
-                    <span
-                      style={{
-                        fontSize: "12px",
-                        color: "#83827d",
-                        textTransform: "uppercase",
-                        letterSpacing: "0.05em",
-                      }}
-                    >
-                      2021 — 2023
-                    </span>
-                  </div>
-
-                  {/* Content Column */}
-                  <div className="md:w-3/4">
-                    <h3
-                      style={{
-                        fontSize: "18px",
-                        fontWeight: "600",
-                        color: "#3d3929",
-                        marginBottom: "8px",
-                      }}
-                    >
-                      Associate Software Engineer · Ernst & Young (EY)
-                    </h3>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        color: "#83827d",
-                        lineHeight: "1.7",
-                        marginBottom: "16px",
-                      }}
-                    >
-                      I worked on cloud-native data engineering pipelines that
-                      processed millions of vulnerability records daily to
-                      strengthen enterprise security insights.
-                    </p>
-
-                    {/* Skills */}
-                    <div className="flex flex-wrap gap-2">
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        AWS
-                      </span>
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        Python
-                      </span>
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        PySpark
-                      </span>
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        PostgreSQL
-                      </span>
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        ETL Pipelines
-                      </span>
-                      <span
-                        className="px-3 py-1 rounded-full"
-                        style={{
-                          fontSize: "12px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                        }}
-                      >
-                        Data Engineering
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
 

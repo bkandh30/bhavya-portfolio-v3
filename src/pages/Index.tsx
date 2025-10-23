@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { ExternalLink } from "lucide-react";
 import { education } from "@/data/education";
-import { skillCategories } from "@/data/skills";
 import { projects } from "@/data/projects";
 import { Footer } from "@/components/layout/Footer";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileHeader } from "@/components/layout/MobileHeader";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
+import { SkillsSection } from "@/components/sections/SkillsSection";
 
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -140,55 +140,7 @@ const Index = () => {
           <ExperienceSection />
 
           {/* Skills Section */}
-          <section id="skills" className="scroll-mt-24">
-            <h2
-              className="text-xs uppercase tracking-widest font-bold mb-6 flex items-center"
-              style={{ color: "hsl(48 20% 20%)" }}
-            >
-              <span
-                className="inline-block h-px mr-4"
-                style={{
-                  width: "64px",
-                  backgroundColor: "hsl(48 20% 20%)",
-                }}
-              />
-              Skills
-            </h2>
-            <div className="space-y-6">
-              {skillCategories.map((category) => (
-                <div key={category.category}>
-                  <h3
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: "600",
-                      color: "#3d3929",
-                      marginBottom: "12px",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.05em",
-                    }}
-                  >
-                    {category.category}
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105"
-                        style={{
-                          fontSize: "13px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                          border: "1px solid rgba(201, 100, 66, 0.2)",
-                        }}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <SkillsSection />
 
           {/* Education Section */}
           <section id="education" className="scroll-mt-24">

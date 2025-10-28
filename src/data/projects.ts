@@ -2,6 +2,15 @@ import type { Project } from "@/data/types"
 
 export const projects: Project[] = [
 	{
+		id: 'http-server-cpp',
+		title: 'C++ HTTP Server',
+		description: 'A lightweight multithreaded HTTP/1.1 server built using Berkeley sockets, designed for concurrent connections and low-latency request handling.',
+		technologies: ['C++', 'Sockets', 'Multithreading', 'Networking', 'Performance'],
+		links: {
+			github: 'https://github.com/bkandh30/http-server-cpp',
+		},
+	},
+	{
 		id: 'hashly',
 		title: 'Hash.ly - URL Shortener',
 		description: 'A modern, privacy-conscious URL shortener built with Next.js and TypeScript, designed for performance and simplicity.',

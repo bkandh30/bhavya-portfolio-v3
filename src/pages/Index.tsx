@@ -8,6 +8,7 @@ import { SkillsSection } from "@/components/sections/SkillsSection";
 import { EducationSection } from "@/components/sections/EducationSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { MobileNav } from "@/components/layout/MobileNav";
+import { BackToTop } from "@/components/layout/BackToTop";
 
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -125,6 +126,8 @@ const Index = () => {
         activeSection={activeSection}
         scrollToSection={scrollToSection}
       />
+
+      <BackToTop />
 
       {/* Fixed Sidebar - Only on large screens */}
       <Sidebar

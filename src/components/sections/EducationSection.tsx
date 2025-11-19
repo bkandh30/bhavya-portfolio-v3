@@ -81,36 +81,6 @@ export const EducationSection = () => {
                 >
                   {edu.institution} · {edu.location}
                 </p>
-
-                {/* Coursework */}
-                <div>
-                  <p
-                    style={{
-                      fontSize: "13px",
-                      fontWeight: "600",
-                      color: "#3d3929",
-                      marginBottom: "8px",
-                    }}
-                  >
-                    Relevant Coursework:
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {edu.coursework.map((course) => (
-                      <span
-                        key={course}
-                        className="px-3 py-1.5 rounded-full"
-                        style={{
-                          fontSize: "13px",
-                          backgroundColor: "rgba(201, 100, 66, 0.1)",
-                          color: "#c96442",
-                          border: "1px solid rgba(201, 100, 66, 0.2)",
-                        }}
-                      >
-                        {course}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
           </div>

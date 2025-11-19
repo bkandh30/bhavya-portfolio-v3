@@ -21,7 +21,7 @@ It is not affiliated with or endorsed by Brittany Chiang.
 
 ## Tech Stack
 
-- **Frontend Framework:** React 18 with TypeScript
+- **Frontend Framework:** React 19 with TypeScript
 - **Build Tool:** Vite
 - **Styling:** Tailwind CSS
 - **UI Components:** shadcn/ui

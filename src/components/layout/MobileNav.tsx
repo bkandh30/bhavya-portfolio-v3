@@ -35,15 +35,19 @@ export const MobileNav = ({
 
   return (
     <>
-      <div className="fixed bottom-6 right-6 z-50 lg:hidden">
+      <div className="fixed top-6 right-6 z-50 lg:hidden">
         <Button
           size="icon"
-          className="rounded-full h-14 w-14 shadow-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-transform hover:scale-105 active:scale-95"
+          className="rounded-full h-13 w-13 border-2 border-white/20 shadow-2xl bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 hover:scale-110 active:scale-95"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
           aria-expanded={isOpen}
         >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isOpen ? (
+            <X className="h-7 w-7" strokeWidth={2.5} />
+          ) : (
+            <Menu className="h-7 w-7" strokeWidth={2.5} />
+          )}
         </Button>
       </div>
 

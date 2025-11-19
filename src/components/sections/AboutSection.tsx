@@ -1,5 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
-import { personalInfo } from "@/data/personal";
+// import { ArrowUpRight } from "lucide-react";
+// import { personalInfo } from "@/data/personal";
 
 export const AboutSection = () => {
   return (
@@ -55,7 +55,7 @@ export const AboutSection = () => {
           Lately, I've been experimenting with Rust, Go, and TypeScript —
           pushing my craft toward building faster, more resilient systems.
         </p>
-        <a
+        {/* <a
           href={personalInfo.resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
@@ -87,7 +87,7 @@ export const AboutSection = () => {
         >
           View Full Résumé
           <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-        </a>
+        </a> */}
       </div>
     </section>
   );

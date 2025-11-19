@@ -77,28 +77,10 @@ export const ExperienceSection = () => {
                     fontSize: "15px",
                     color: "#83827d",
                     lineHeight: "1.7",
-                    marginBottom: "16px",
                   }}
                 >
                   {exp.description}
                 </p>
-
-                {/* Skills */}
-                <div className="flex flex-wrap gap-2">
-                  {exp.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 rounded-full"
-                      style={{
-                        fontSize: "12px",
-                        backgroundColor: "rgba(201, 100, 66, 0.1)",
-                        color: "#c96442",
-                      }}
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           </div>

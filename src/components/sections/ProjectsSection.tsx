@@ -1,6 +1,48 @@
 import { ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 
+const getIconSlug = (tech: string): string | null => {
+  const slugMap: Record<string, string> = {
+    "Next.js": "nextdotjs",
+    TypeScript: "typescript",
+    Turso: "turso",
+    "Upstash Redis": "upstash",
+    Drizzle: "drizzle",
+    Vercel: "vercel",
+    Rust: "rust",
+    Docker: "docker",
+    PostgreSQL: "postgresql",
+    "Github Actions": "githubactions",
+    Go: "go",
+    JWT: "jsonwebtokens",
+    Python: "python",
+    FastAPI: "fastapi",
+    Celery: "celery",
+    AWS: "amazonwebservices",
+    Lambda: "awslambda",
+    DynamoDB: "amazondynamodb",
+    S3: "amazons3",
+    CloudFront: "amazoncloudfront",
+    React: "react",
+    "Tailwind CSS": "tailwindcss",
+    "Node.js": "nodedotjs",
+  };
+
+  const generics = [
+    "Warp",
+    "SQLx",
+    "Logging",
+    "Metrics",
+    "AsyncIO",
+    "NLTK",
+    "CI/CD",
+  ];
+
+  if (generics.includes(tech)) return null;
+
+  return slugMap[tech] || tech.toLowerCase();
+};
+
 export const ProjectsSection = () => {
   return (
     <section id="projects" className="scroll-mt-24">
@@ -68,22 +110,38 @@ export const ProjectsSection = () => {
                 {project.description}
               </p>
 
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1.5 rounded-full"
-                    style={{
-                      fontSize: "13px",
-                      backgroundColor: "rgba(201, 100, 66, 0.1)",
-                      color: "#c96442",
-                      border: "1px solid rgba(201, 100, 66, 0.2)",
-                    }}
-                  >
-                    {tech}
-                  </span>
-                ))}
+              {/* Tech Stack with Icons */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.technologies.map((tech) => {
+                  const iconSlug = getIconSlug(tech);
+
+                  return (
+                    <span
+                      key={tech}
+                      className="px-3 py-1.5 rounded-full flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                      style={{
+                        fontSize: "13px",
+                        backgroundColor: "white",
+                        color: "#3d3929",
+                        border: "1px solid rgba(201, 100, 66, 0.15)",
+                        boxShadow: "0 1px 2px rgba(0,0,0,0.02)",
+                      }}
+                    >
+                      {iconSlug && (
+                        <img
+                          src={`https://cdn.simpleicons.org/${iconSlug}`}
+                          alt=""
+                          className="w-3.5 h-3.5 opacity-70"
+                          loading="lazy"
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                          }}
+                        />
+                      )}
+                      {tech}
+                    </span>
+                  );
+                })}
               </div>
 
               {/* Links */}

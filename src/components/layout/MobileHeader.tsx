@@ -1,7 +1,24 @@
-import { Mail } from "lucide-react";
+import { useState } from "react";
+import { Mail, Check } from "lucide-react";
 import { personalInfo } from "@/data/personal";
+import { toast } from "sonner";
 
 export const MobileHeader = () => {
+  const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopyEmail = (e: React.MouseEvent, url: string) => {
+    e.preventDefault();
+    const email = url.replace("mailto:", "");
+    navigator.clipboard.writeText(email);
+
+    setIsCopied(true);
+    toast.success("Email copied to clipboard!");
+
+    setTimeout(() => {
+      setIsCopied(false);
+    }, 2000);
+  };
+
   return (
     <section className="lg:hidden">
       <div className="relative h-24 w-24 mb-6 ring-2 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg rounded-full overflow-hidden">
@@ -41,7 +58,12 @@ export const MobileHeader = () => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-all duration-300 hover:scale-110"
+            onClick={(e) => {
+              if (link.platform === "email") {
+                handleCopyEmail(e, link.url);
+              }
+            }}
+            className="transition-all duration-300 hover:scale-110 cursor-pointer"
             style={{ color: "hsl(48 3% 50%)" }}
             aria-label={link.label}
           >
@@ -65,9 +87,12 @@ export const MobileHeader = () => {
                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
               </svg>
             )}
-            {link.icon === "mail" && (
-              <Mail className="w-9 h-9" strokeWidth={1.5} />
-            )}
+            {link.icon === "mail" &&
+              (isCopied ? (
+                <Check className="w-9 h-9" strokeWidth={1.5} />
+              ) : (
+                <Mail className="w-9 h-9" strokeWidth={1.5} />
+              ))}
           </a>
         ))}
       </div>

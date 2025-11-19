@@ -7,6 +7,7 @@ import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { EducationSection } from "@/components/sections/EducationSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
+import { MobileNav } from "@/components/layout/MobileNav";
 
 // import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
@@ -118,6 +119,11 @@ const Index = () => {
         style={{
           background: `radial-gradient(400px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 239, 204, 0.25), transparent 80%)`,
         }}
+      />
+
+      <MobileNav
+        activeSection={activeSection}
+        scrollToSection={scrollToSection}
       />
 
       {/* Fixed Sidebar - Only on large screens */}

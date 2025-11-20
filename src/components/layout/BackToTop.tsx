@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { SPACING } from "@/constants/theme";
 
 export const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > SPACING.scroll.threshold) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

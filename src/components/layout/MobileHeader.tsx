@@ -6,17 +6,27 @@ import { toast } from "sonner";
 export const MobileHeader = () => {
   const [isCopied, setIsCopied] = useState(false);
 
-  const handleCopyEmail = (e: React.MouseEvent, url: string) => {
+  const handleCopyEmail = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    url: string
+  ): void => {
     e.preventDefault();
     const email = url.replace("mailto:", "");
-    navigator.clipboard.writeText(email);
 
-    setIsCopied(true);
-    toast.success("Email copied to clipboard!");
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        setIsCopied(true);
+        toast.success("Email copied to clipboard!");
 
-    setTimeout(() => {
-      setIsCopied(false);
-    }, 2000);
+        setTimeout(() => {
+          setIsCopied(false);
+        }, 2000);
+      })
+      .catch((error: unknown) => {
+        console.error("Failed to copy email:", error);
+        toast.error("Failed to copy email");
+      });
   };
 
   return (

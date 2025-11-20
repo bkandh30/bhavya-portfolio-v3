@@ -74,7 +74,9 @@ export const ProjectsSection = () => {
                           alt=""
                           className="w-3.5 h-3.5 opacity-70"
                           loading="lazy"
-                          onError={(e) => {
+                          onError={(
+                            e: React.SyntheticEvent<HTMLImageElement, Event>
+                          ) => {
                             e.currentTarget.style.display = "none";
                           }}
                         />

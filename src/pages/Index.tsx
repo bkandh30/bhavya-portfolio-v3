@@ -10,8 +10,6 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { BackToTop } from "@/components/layout/BackToTop";
 
-// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
 const Index = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -80,7 +78,7 @@ const Index = () => {
     document.documentElement.style.scrollBehavior = "smooth";
 
     // Intersection Observer for fade-in animations
-    const observerOptions = {
+    const observerOptions: IntersectionObserverInit = {
       threshold: 0.1,
       rootMargin: "0px 0px -100px 0px",
     };
@@ -104,9 +102,11 @@ const Index = () => {
     };
   }, []);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id: string): void => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (

@@ -34,21 +34,16 @@ export const MobileHeader = () => {
           />
         </picture>
       </div>
-      <h1
-        className="text-4xl font-bold mb-2"
-        style={{ color: "hsl(48 20% 20%)" }}
-      >
+
+      <h1 className="text-4xl font-bold mb-2 text-[hsl(48_20%_20%)]">
         {personalInfo.name}
       </h1>
-      <h2
-        className="text-lg font-semibold mb-4"
-        style={{ color: "hsl(48 20% 20%)" }}
-      >
+
+      <h2 className="text-lg font-semibold mb-4 text-[hsl(48_20%_20%)]">
         {personalInfo.title}
       </h2>
-      <p className="mb-8" style={{ color: "hsl(48 3% 50%)" }}>
-        {personalInfo.bio}
-      </p>
+
+      <p className="mb-8 text-[hsl(48_3%_50%)]">{personalInfo.bio}</p>
 
       {/* Social Links */}
       <div className="flex items-center gap-8 mb-12">
@@ -63,8 +58,7 @@ export const MobileHeader = () => {
                 handleCopyEmail(e, link.url);
               }
             }}
-            className="transition-all duration-300 hover:scale-110 cursor-pointer"
-            style={{ color: "hsl(48 3% 50%)" }}
+            className="text-[hsl(48_3%_50%)] transition-all duration-300 hover:scale-110 cursor-pointer"
             aria-label={link.label}
           >
             {link.icon === "github" && (

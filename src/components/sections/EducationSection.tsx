@@ -6,21 +6,29 @@ import {
 
 export const EducationSection = () => {
   return (
-    <section id="education" className="scroll-mt-24">
-      <h2 className="section-heading">Education</h2>
+    <section
+      id="education"
+      className="scroll-mt-24"
+      aria-labelledby="education-heading"
+    >
+      <h2 id="education-heading" className="section-heading">
+        Education
+      </h2>
 
-      <div className="space-y-8">
+      <ul className="space-y-8" role="list">
         {education.map((edu) => (
-          <SectionCard key={edu.id}>
-            <SectionCardLayout dateRange={edu.dateRange}>
-              <h3 className="card-title">{edu.degree}</h3>
-              <p className="card-description">
-                {edu.institution} · {edu.location}
-              </p>
-            </SectionCardLayout>
-          </SectionCard>
+          <li key={edu.id} role="listitem">
+            <SectionCard>
+              <SectionCardLayout dateRange={edu.dateRange}>
+                <h3 className="card-title">{edu.degree}</h3>
+                <p className="card-description">
+                  {edu.institution} · {edu.location}
+                </p>
+              </SectionCardLayout>
+            </SectionCard>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

@@ -1,47 +1,8 @@
+import type React from "react";
 import { ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
-
-const getIconSlug = (tech: string): string | null => {
-  const slugMap: Record<string, string> = {
-    "Next.js": "nextdotjs",
-    TypeScript: "typescript",
-    Turso: "turso",
-    "Upstash Redis": "upstash",
-    Drizzle: "drizzle",
-    Vercel: "vercel",
-    Rust: "rust",
-    Docker: "docker",
-    PostgreSQL: "postgresql",
-    "Github Actions": "githubactions",
-    Go: "go",
-    JWT: "jsonwebtokens",
-    Python: "python",
-    FastAPI: "fastapi",
-    Celery: "celery",
-    AWS: "amazonwebservices",
-    Lambda: "awslambda",
-    DynamoDB: "amazondynamodb",
-    S3: "amazons3",
-    CloudFront: "amazoncloudfront",
-    React: "react",
-    "Tailwind CSS": "tailwindcss",
-    "Node.js": "nodedotjs",
-  };
-
-  const generics = [
-    "Warp",
-    "SQLx",
-    "Logging",
-    "Metrics",
-    "AsyncIO",
-    "NLTK",
-    "CI/CD",
-  ];
-
-  if (generics.includes(tech)) return null;
-
-  return slugMap[tech] || tech.toLowerCase();
-};
+import { SectionCard } from "@/components/shared/SectionCard";
+import { getIconSlug } from "@/utils/icon-mapping";
 
 export const ProjectsSection = () => {
   return (
@@ -50,10 +11,7 @@ export const ProjectsSection = () => {
 
       <div className="space-y-8">
         {projects.map((project) => (
-          <div key={project.id} className="card-hover">
-            {/* Left border accent */}
-            <span className="border-accent" />
-
+          <SectionCard key={project.id}>
             <div className="flex flex-col">
               <h3 className="card-title">{project.title}</h3>
 
@@ -100,6 +58,7 @@ export const ProjectsSection = () => {
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 )}
+
                 {project.links.github && (
                   <a
                     href={project.links.github}
@@ -113,7 +72,7 @@ export const ProjectsSection = () => {
                 )}
               </div>
             </div>
-          </div>
+          </SectionCard>
         ))}
       </div>
     </section>

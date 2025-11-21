@@ -25,31 +25,86 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log'],
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
+      },
+      format: {
+        comments: false,
       },
     },
+    
     // Optimize chunk splitting
     rollupOptions: {
       output: {
         manualChunks: {
+          // Vendor chunks
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': [
             '@radix-ui/react-avatar',
             '@radix-ui/react-slot',
             '@radix-ui/react-tooltip',
           ],
+          'query-vendor': ['@tanstack/react-query'],
+          
+          // Utility chunks
+          'utils': [
+            'clsx',
+            'tailwind-merge',
+            'class-variance-authority',
+          ],
         },
+        
+        // Optimize chunk naming for better caching
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Enable compression
+    
+    // CSS optimizations
     cssCodeSplit: true,
+    cssMinify: true,
+    
     // Disable sourcemaps in production
-    sourcemap: false, 
+    sourcemap: false,
+    
     // Optimize chunk size
     chunkSizeWarningLimit: 1000,
+    
+    // Target modern browsers for smaller bundles
+    target: 'es2020',
+    
+    // Enable module preload polyfill
+    modulePreload: {
+      polyfill: true,
+    },
+    
+    // Compression
+    reportCompressedSize: true,
+    
+    // Assets
+    assetsInlineLimit: 4096,
   },
+  
   // Optimize dependencies
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: [
+      'react',
+      'react-dom',
+      'react-router-dom',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-tooltip',
+    ],
+    exclude: [],
   },
-})
+  
+  // Preview server config
+  preview: {
+    port: 8080,
+    host: true,
+  },
+});

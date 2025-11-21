@@ -1,7 +1,8 @@
-import { ExternalLink } from 'lucide-react';
-import { projects } from '@/data/projects';
-import { SectionCard } from '@/components/shared/SectionCard';
-import { getIconSlug } from '@/utils/icon-mapping';
+import type React from "react";
+import { ExternalLink } from "lucide-react";
+import { projects } from "@/data/projects";
+import { SectionCard } from "@/components/shared/SectionCard";
+import { getIconSlug } from "@/utils/icon-mapping";
 
 export const ProjectsSection = () => {
   return (
@@ -34,7 +35,7 @@ export const ProjectsSection = () => {
                           onError={(
                             e: React.SyntheticEvent<HTMLImageElement, Event>
                           ) => {
-                            e.currentTarget.style.display = 'none';
+                            e.currentTarget.style.display = "none";
                           }}
                         />
                       )}
@@ -47,7 +48,7 @@ export const ProjectsSection = () => {
               {/* Links */}
               <div className="flex gap-4">
                 {project.links.demo && (
-                  
+                  <a
                     href={project.links.demo}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -57,8 +58,9 @@ export const ProjectsSection = () => {
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 )}
+
                 {project.links.github && (
-                  
+                  <a
                     href={project.links.github}
                     target="_blank"
                     rel="noopener noreferrer"

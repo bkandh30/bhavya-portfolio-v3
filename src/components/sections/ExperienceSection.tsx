@@ -6,21 +6,29 @@ import {
 
 export const ExperienceSection = () => {
   return (
-    <section id="experience" className="scroll-mt-24">
-      <h2 className="section-heading">Experience</h2>
+    <section
+      id="experience"
+      className="scroll-mt-24"
+      aria-labelledby="experience-heading"
+    >
+      <h2 id="experience-heading" className="section-heading">
+        Experience
+      </h2>
 
-      <div className="space-y-8">
+      <ul className="space-y-8" role="list">
         {experiences.map((exp) => (
-          <SectionCard key={exp.id}>
-            <SectionCardLayout dateRange={exp.dateRange}>
-              <h3 className="card-title">
-                {exp.role} · {exp.company}
-              </h3>
-              <p className="card-description">{exp.description}</p>
-            </SectionCardLayout>
-          </SectionCard>
+          <li key={exp.id} role="listitem">
+            <SectionCard>
+              <SectionCardLayout dateRange={exp.dateRange}>
+                <h3 className="card-title">
+                  {exp.role} · {exp.company}
+                </h3>
+                <p className="card-description">{exp.description}</p>
+              </SectionCardLayout>
+            </SectionCard>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

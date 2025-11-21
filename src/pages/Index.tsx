@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Footer } from "@/components/layout/Footer";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileHeader } from "@/components/layout/MobileHeader";
@@ -9,105 +8,27 @@ import { EducationSection } from "@/components/sections/EducationSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { BackToTop } from "@/components/layout/BackToTop";
+import { useActiveSection } from "@/hooks/useActiveSection";
+import { useMousePosition } from "@/hooks/useMousePosition";
+import { useFadeInObserver } from "@/hooks/useFadeInObserver";
+import { useScrollToSection } from "@/hooks/useScrollToSection";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+
+const SECTION_IDS = [
+  "about",
+  "experience",
+  "skills",
+  "education",
+  "projects",
+] as const;
 
 const Index = () => {
-  const [activeSection, setActiveSection] = useState("about");
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const activeSection = useActiveSection(SECTION_IDS);
+  const mousePosition = useMousePosition(true);
+  const scrollToSection = useScrollToSection();
 
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const sections = [
-            "about",
-            "experience",
-            "skills",
-            "education",
-            "projects",
-          ];
-          const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-          for (const section of sections) {
-            const element = document.getElementById(section);
-            if (element) {
-              const { offsetTop, offsetHeight } = element;
-              if (
-                scrollPosition >= offsetTop &&
-                scrollPosition < offsetTop + offsetHeight
-              ) {
-                setActiveSection(section);
-                break;
-              }
-            }
-          }
-
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Mouse tracking enabled only on desktop
-  useEffect(() => {
-    if (window.innerWidth < 1024) return;
-
-    let ticking = false;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          setMousePosition({ x: e.clientX, y: e.clientY });
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("mousemove", handleMouseMove, { passive: true });
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
-  useEffect(() => {
-    // Smooth scroll behavior
-    document.documentElement.style.scrollBehavior = "smooth";
-
-    // Intersection Observer for fade-in animations
-    const observerOptions: IntersectionObserverInit = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in-visible");
-        }
-      });
-    }, observerOptions);
-
-    const sections = document.querySelectorAll("section");
-    sections.forEach((section) => {
-      section.classList.add("fade-in-section");
-      observer.observe(section);
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  const scrollToSection = (id: string): void => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  useSmoothScroll();
+  useFadeInObserver();
 
   return (
     <div

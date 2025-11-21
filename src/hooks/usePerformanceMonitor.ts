@@ -1,19 +1,21 @@
 import { useEffect } from 'react';
 
 interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
+  fcp?: number; // First Contentful Paint
+  lcp?: number; // Largest Contentful Paint
+  fid?: number; // First Input Delay
+  cls?: number; // Cumulative Layout Shift
+  ttfb?: number; // Time to First Byte
 }
 
 export function usePerformanceMonitor(): void {
   useEffect(() => {
+    // Only monitor in production
     if (import.meta.env.DEV) return;
 
     const metrics: PerformanceMetrics = {};
 
+    // Observe paint timing
     const paintObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (entry.name === 'first-contentful-paint') {
@@ -25,10 +27,11 @@ export function usePerformanceMonitor(): void {
 
     try {
       paintObserver.observe({ type: 'paint', buffered: true });
-    } catch (e) {
+    } catch {
       // Paint timing not supported
     }
 
+    // Observe Largest Contentful Paint
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1] as PerformanceEntry & {
@@ -42,10 +45,11 @@ export function usePerformanceMonitor(): void {
 
     try {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
-    } catch (e) {
+    } catch {
       // LCP not supported
     }
 
+    // Observe First Input Delay
     const fidObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as PerformanceEntry & {
@@ -61,10 +65,11 @@ export function usePerformanceMonitor(): void {
 
     try {
       fidObserver.observe({ type: 'first-input', buffered: true });
-    } catch (e) {
+    } catch {
       // FID not supported
     }
 
+    // Observe Cumulative Layout Shift
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -83,10 +88,11 @@ export function usePerformanceMonitor(): void {
 
     try {
       clsObserver.observe({ type: 'layout-shift', buffered: true });
-    } catch (e) {
+    } catch {
       // CLS not supported
     }
 
+    // Get navigation timing
     const navTiming = performance.getEntriesByType('navigation')[0] as 
       PerformanceNavigationTiming | undefined;
     
@@ -95,6 +101,7 @@ export function usePerformanceMonitor(): void {
       console.log(`TTFB: ${metrics.ttfb.toFixed(2)}ms`);
     }
 
+    // Log all metrics after page load
     window.addEventListener('load', () => {
       setTimeout(() => {
         console.log('Performance Metrics:', metrics);

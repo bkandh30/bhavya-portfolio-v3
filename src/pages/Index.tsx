@@ -27,12 +27,12 @@ const SECTION_IDS = [
 
 const Index = () => {
   const activeSection = useActiveSection(SECTION_IDS);
-  const mousePosition = useMousePosition(true);
   const scrollToSection = useScrollToSection();
 
   useSmoothScroll();
   useFadeInObserver();
   useKeyboardNavigation(SECTION_IDS, activeSection, scrollToSection);
+  useMousePosition(true);
 
   return (
     <div
@@ -42,11 +42,12 @@ const Index = () => {
       {/* Skip to content link for keyboard users */}
       <SkipToContent />
 
-      {/* Cursor spotlight effect - disabled on mobile for performance */}
+      {/* Optimized cursor spotlight effect using CSS custom properties */}
       <div
         className="spotlight-effect pointer-events-none fixed inset-0 z-30 transition duration-300 hidden lg:block"
         style={{
-          background: `radial-gradient(400px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 239, 204, 0.25), transparent 80%)`,
+          background:
+            "radial-gradient(400px at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(255, 239, 204, 0.25), transparent 80%)",
         }}
         aria-hidden="true"
       />

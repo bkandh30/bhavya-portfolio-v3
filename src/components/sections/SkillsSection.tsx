@@ -3,8 +3,14 @@ import { getIconSlug } from "@/utils/icon-mapping";
 
 export const SkillsSection = () => {
   return (
-    <section id="skills" className="scroll-mt-24">
-      <h2 className="section-heading">Skills</h2>
+    <section
+      id="skills"
+      className="scroll-mt-24"
+      aria-labelledby="skills-heading"
+    >
+      <h2 id="skills-heading" className="section-heading">
+        Skills
+      </h2>
 
       <div className="space-y-8">
         {skillCategories.map((category) => (
@@ -13,18 +19,27 @@ export const SkillsSection = () => {
               {category.category}
             </h3>
 
-            <div className="flex flex-wrap gap-3">
+            <div
+              className="flex flex-wrap gap-3"
+              role="list"
+              aria-label={`${category.category} skills`}
+            >
               {category.skills.map((skill) => {
                 const iconSlug = getIconSlug(skill);
 
                 return (
-                  <span key={skill} className="tech-badge-lg group">
+                  <span
+                    key={skill}
+                    className="tech-badge-lg group"
+                    role="listitem"
+                  >
                     {iconSlug && (
                       <img
                         src={`https://cdn.simpleicons.org/${iconSlug}`}
                         alt=""
                         className="w-3.5 h-3.5"
                         loading="lazy"
+                        aria-hidden="true"
                         onError={(
                           e: React.SyntheticEvent<HTMLImageElement, Event>
                         ) => {

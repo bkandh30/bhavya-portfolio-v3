@@ -8,11 +8,14 @@ import { EducationSection } from "@/components/sections/EducationSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { BackToTop } from "@/components/layout/BackToTop";
+import { SkipToContent } from "@/components/error/SkipToContent";
+import { SectionErrorBoundary } from "@/components/error/SectionErrorBoundary";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useMousePosition } from "@/hooks/useMousePosition";
 import { useFadeInObserver } from "@/hooks/useFadeInObserver";
 import { useScrollToSection } from "@/hooks/useScrollToSection";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
+import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 
 const SECTION_IDS = [
   "about",
@@ -29,18 +32,23 @@ const Index = () => {
 
   useSmoothScroll();
   useFadeInObserver();
+  useKeyboardNavigation(SECTION_IDS, activeSection, scrollToSection);
 
   return (
     <div
       className="min-h-screen relative"
       style={{ backgroundColor: "hsl(48 38% 96%)" }}
     >
+      {/* Skip to content link for keyboard users */}
+      <SkipToContent />
+
       {/* Cursor spotlight effect - disabled on mobile for performance */}
       <div
-        className="pointer-events-none fixed inset-0 z-30 transition duration-300 hidden lg:block"
+        className="spotlight-effect pointer-events-none fixed inset-0 z-30 transition duration-300 hidden lg:block"
         style={{
           background: `radial-gradient(400px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 239, 204, 0.25), transparent 80%)`,
         }}
+        aria-hidden="true"
       />
 
       <MobileNav
@@ -57,30 +65,57 @@ const Index = () => {
       />
 
       {/* Main Content */}
-      <main className="lg:ml-[45%] min-h-screen">
+      <main
+        id="main-content"
+        className="lg:ml-[45%] min-h-screen"
+        tabIndex={-1}
+        role="main"
+        aria-label="Main content"
+      >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 space-y-10 sm:space-y-12">
           {/* Mobile Hero - Only visible on small screens */}
           <MobileHeader />
 
           {/* About Section */}
-          <AboutSection />
+          <SectionErrorBoundary sectionName="About">
+            <AboutSection />
+          </SectionErrorBoundary>
 
           {/* Experience Section */}
-          <ExperienceSection />
+          <SectionErrorBoundary sectionName="Experience">
+            <ExperienceSection />
+          </SectionErrorBoundary>
 
           {/* Skills Section */}
-          <SkillsSection />
+          <SectionErrorBoundary sectionName="Skills">
+            <SkillsSection />
+          </SectionErrorBoundary>
 
           {/* Education Section */}
-          <EducationSection />
+          <SectionErrorBoundary sectionName="Education">
+            <EducationSection />
+          </SectionErrorBoundary>
 
           {/* Projects Section */}
-          <ProjectsSection />
+          <SectionErrorBoundary sectionName="Projects">
+            <ProjectsSection />
+          </SectionErrorBoundary>
 
           {/* Footer */}
           <Footer />
         </div>
       </main>
+
+      {/* Screen reader announcement for keyboard navigation */}
+      <div
+        className="sr-only"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        Use Alt + Arrow keys to navigate between sections. Currently viewing:{" "}
+        {activeSection}
+      </div>
     </div>
   );
 };

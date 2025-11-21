@@ -10,7 +10,10 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
   const sections = ["about", "experience", "skills", "education", "projects"];
 
   return (
-    <aside className="hidden lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:w-[45%] lg:flex lg:items-center lg:justify-center lg:p-24">
+    <aside
+      className="hidden lg:fixed lg:left-0 lg:top-0 lg:h-screen lg:w-[45%] lg:flex lg:items-center lg:justify-center lg:p-24"
+      aria-label="Profile and navigation"
+    >
       <div className="max-w-md w-full">
         <div className="relative h-28 w-28 mb-6 ring-1 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg rounded-full overflow-hidden">
           <picture>
@@ -37,7 +40,7 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
         <p className="mb-8 text-[hsl(48_3%_50%)]">{personalInfo.bio}</p>
 
         {/* Navigation */}
-        <nav className="mb-12 hidden lg:block">
+        <nav className="mb-12 hidden lg:block" aria-label="Main navigation">
           <ul className="space-y-4">
             {sections.map((section) => (
               <li key={section}>
@@ -52,6 +55,7 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
                         ? "hsl(48 20% 20%)"
                         : "hsl(48 3% 50%)",
                   }}
+                  aria-current={activeSection === section ? "page" : undefined}
                 >
                   <span
                     className="inline-block h-px transition-all duration-300 mr-4"
@@ -62,6 +66,7 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
                           ? "hsl(48 20% 20%)"
                           : "hsl(48 3% 50%)",
                     }}
+                    aria-hidden="true"
                   />
                   {section}
                 </button>

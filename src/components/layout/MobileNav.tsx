@@ -40,26 +40,34 @@ export const MobileNav = ({
           size="icon"
           className="rounded-full h-13 w-13 border-2 border-white/20 shadow-2xl bg-foreground text-background hover:bg-foreground/90 transition-all duration-300 hover:scale-110 active:scale-95"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
+          aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? (
-            <X className="h-7 w-7" strokeWidth={2.5} />
+            <X className="h-7 w-7" strokeWidth={2.5} aria-hidden="true" />
           ) : (
-            <Menu className="h-7 w-7" strokeWidth={2.5} />
+            <Menu className="h-7 w-7" strokeWidth={2.5} aria-hidden="true" />
           )}
         </Button>
       </div>
 
       <div
+        id="mobile-navigation"
         className={cn(
           "fixed inset-0 z-40 bg-background/95 backdrop-blur-sm lg:hidden flex items-center justify-center transition-all duration-300 ease-in-out",
           isOpen
             ? "opacity-100 visible"
             : "opacity-0 invisible pointer-events-none"
         )}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation menu"
       >
-        <nav className="flex flex-col items-center gap-8 p-4">
+        <nav
+          className="flex flex-col items-center gap-8 p-4"
+          aria-label="Main navigation"
+        >
           {sections.map((section) => (
             <button
               key={section.id}
@@ -73,6 +81,7 @@ export const MobileNav = ({
                   ? "text-primary font-bold"
                   : "text-muted-foreground hover:text-foreground"
               )}
+              aria-current={activeSection === section.id ? "page" : undefined}
             >
               {section.label}
             </button>

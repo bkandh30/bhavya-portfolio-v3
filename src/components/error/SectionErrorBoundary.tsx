@@ -20,7 +20,7 @@ export class SectionErrorBoundary extends Component<
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(_: Error): SectionErrorBoundaryState {
+  static getDerivedStateFromError(): SectionErrorBoundaryState {
     return { hasError: true };
   }
 

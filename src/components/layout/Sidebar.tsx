@@ -1,5 +1,6 @@
 import { personalInfo } from "@/data/personal";
 import { SocialLinks } from "@/components/shared/SocialLinks";
+import { OptimizedImage } from "@/components/ui/OptimizedImage";
 
 interface SidebarProps {
   activeSection: string;
@@ -16,17 +17,15 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
     >
       <div className="max-w-md w-full">
         <div className="relative h-28 w-28 mb-6 ring-1 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg rounded-full overflow-hidden">
-          <picture>
-            <source srcSet={personalInfo.avatar.webp} type="image/webp" />
-            <img
-              src={personalInfo.avatar.png}
-              alt={personalInfo.avatar.alt}
-              width={112}
-              height={112}
-              className="object-cover w-full h-full"
-              loading="eager"
-            />
-          </picture>
+          <OptimizedImage
+            src={personalInfo.avatar.png}
+            webpSrc={personalInfo.avatar.webp}
+            alt={personalInfo.avatar.alt}
+            width={112}
+            height={112}
+            className="object-cover w-full h-full"
+            priority
+          />
         </div>
 
         <h1 className="text-5xl font-bold mb-2 text-[hsl(48_20%_20%)]">

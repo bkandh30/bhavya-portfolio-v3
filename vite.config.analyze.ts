@@ -2,8 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from "path";
 import tailwindcss from '@tailwindcss/vite';
+import { visualizer } from 'rollup-plugin-visualizer';
 
-// https://vite.dev/config/
 export default defineConfig({
   server: {
     host: "::",
@@ -12,6 +12,12 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    visualizer({
+      open: true,
+      filename: 'dist/stats.html',
+      gzipSize: true,
+      brotliSize: true,
+    }),
   ],
   resolve: {
     alias: {
@@ -19,7 +25,6 @@ export default defineConfig({
     },
   },
   build: {
-    // Enable minification
     minify: 'terser',
     terserOptions: {
       compress: {
@@ -35,12 +40,9 @@ export default defineConfig({
         comments: false,
       },
     },
-    
-    // Optimize chunk splitting
     rollupOptions: {
       output: {
         manualChunks: {
-          // Vendor chunks
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': [
             '@radix-ui/react-avatar',
@@ -48,48 +50,28 @@ export default defineConfig({
             '@radix-ui/react-tooltip',
           ],
           'query-vendor': ['@tanstack/react-query'],
-          
-          // Utility chunks
           'utils': [
             'clsx',
             'tailwind-merge',
             'class-variance-authority',
           ],
         },
-        
-        // Optimize chunk naming for better caching
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    
-    // CSS optimizations
     cssCodeSplit: true,
     cssMinify: true,
-    
-    // Disable sourcemaps in production
     sourcemap: false,
-    
-    // Optimize chunk size
     chunkSizeWarningLimit: 1000,
-    
-    // Target modern browsers for smaller bundles
     target: 'es2020',
-    
-    // Enable module preload polyfill
     modulePreload: {
       polyfill: true,
     },
-    
-    // Compression
     reportCompressedSize: true,
-    
-    // Assets
     assetsInlineLimit: 4096,
   },
-  
-  // Optimize dependencies
   optimizeDeps: {
     include: [
       'react',
@@ -99,10 +81,7 @@ export default defineConfig({
       '@radix-ui/react-slot',
       '@radix-ui/react-tooltip',
     ],
-    exclude: [],
   },
-  
-  // Preview server config
   preview: {
     port: 8080,
     host: true,

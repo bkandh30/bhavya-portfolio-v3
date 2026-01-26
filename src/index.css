@@ -63,15 +63,13 @@
 }
 
 @utility section-heading {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
   font-weight: 700;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   color: var(--color-text-primary-alt);
-  font-family: "Open Sans", var(--font-body);
 }
 
 @utility section-intro {
@@ -95,14 +93,12 @@
   color: var(--color-text-primary);
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
-  font-family: var(--font-body);
 }
 
 @utility card-description {
   font-size: 0.9375rem;
   color: var(--color-text-secondary);
   line-height: 1.7;
-  font-family: var(--font-body);
 }
 
 @utility tech-badge {
@@ -117,8 +113,6 @@
   border: 1px solid rgba(185, 91, 62, 0.2);
   box-shadow: 0 1px 2px rgba(47, 42, 35, 0.06);
   transition: all 0.3s ease;
-  font-family: var(--font-body);
-  font-weight: 500;
 
   &:hover {
     transform: scale(1.05);
@@ -138,8 +132,6 @@
   box-shadow: 0 1px 2px rgba(47, 42, 35, 0.06);
   transition: all 0.3s ease;
   cursor: default;
-  font-family: var(--font-body);
-  font-weight: 500;
 
   &:hover {
     transform: scale(1.05);
@@ -177,11 +169,6 @@
 /* Tweakcn Custom Theme */
 /* Claude Theme Used */
 :root {
-  --font-display: "Fraunces", "Times New Roman", serif;
-  --font-body: "Source Sans 3", system-ui, -apple-system, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
-
   --background: 36 38% 95%;
   --foreground: 34 20% 17%;
   --card: 36 34% 93%;
@@ -310,7 +297,7 @@
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: var(--font-body);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
   html {

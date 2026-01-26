@@ -25,7 +25,7 @@ export const ProjectsSection = () => {
 
       <div className="space-y-12">
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary-custom">
+          <h3 className="text-sm font-semibold text-secondary-custom">
             Featured Work
           </h3>
           <ul className="mt-6 space-y-8" role="list">
@@ -111,7 +111,7 @@ export const ProjectsSection = () => {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary-custom">
+          <h3 className="text-sm font-semibold text-secondary-custom">
             More Projects
           </h3>
           <ul className="mt-6 space-y-6" role="list">

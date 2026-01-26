@@ -7,7 +7,13 @@ export const experiences: Experience[] = [
     role: 'Software Engineer',
     dateRange: '2023 — 2025',
     description:
-      'At ASU, I built automation tools and validation pipelines to help scale distributed computing coursework for hundreds of students each semester.',
+      'Built automation and validation tooling that scaled distributed systems coursework with consistent feedback loops.',
+    highlights: [
+      'Designed a grading and validation pipeline for large-scale coursework submissions.',
+      'Improved developer workflows with reusable tooling and automated checks.',
+      'Collaborated with faculty to translate course requirements into reliable systems.',
+    ],
+    scope: ['Automation', 'Validation Pipelines', 'Developer Tooling'],
     skills: [
 		'Python',
 		'C#',
@@ -22,7 +28,13 @@ export const experiences: Experience[] = [
     role: 'Associate Software Engineer',
     dateRange: '2021 — 2023',
     description:
-      'I worked on cloud-native data engineering pipelines that processed millions of vulnerability records daily to strengthen enterprise security insights.',
+      'Built cloud-native data pipelines to improve enterprise security insights at scale.',
+    highlights: [
+      'Developed resilient ETL workflows for large vulnerability datasets.',
+      'Partnered with security teams to improve data quality and observability.',
+      'Optimized pipeline performance for reliability in production environments.',
+    ],
+    scope: ['Cloud Data Pipelines', 'Observability', 'Reliability'],
     skills: [
 		'AWS',
 		'Python',

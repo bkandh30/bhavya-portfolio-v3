@@ -25,6 +25,8 @@ export interface Experience {
   role: string;
   dateRange: string;
   description: string;
+  highlights?: string[];
+  scope?: string[];
   skills: string[];
 }
 
@@ -46,6 +48,9 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  featured?: boolean;
+  role?: string;
+  focus?: string;
   technologies: string[];
   links: {
     demo?: string;

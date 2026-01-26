@@ -23,15 +23,25 @@ export const ExperienceSection = () => {
       <ul className="space-y-8" role="list">
         {experiences.map((exp) => (
           <li key={exp.id} role="listitem">
-            <SectionCard>
-              <SectionCardLayout dateRange={exp.dateRange}>
-                <h3 className="card-title">
-                  {exp.role} · {exp.company}
-                </h3>
-                <p className="card-description">{exp.description}</p>
-              </SectionCardLayout>
-            </SectionCard>
-          </li>
+              <SectionCard>
+                <SectionCardLayout dateRange={exp.dateRange}>
+                  <h3 className="card-title">
+                    {exp.role} · {exp.company}
+                  </h3>
+                  <p className="card-description">{exp.description}</p>
+
+                  {exp.scope && exp.scope.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {exp.scope.map((item) => (
+                        <span key={item} className="tech-badge">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </SectionCardLayout>
+              </SectionCard>
+            </li>
         ))}
       </ul>
     </section>

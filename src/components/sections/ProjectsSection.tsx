@@ -82,7 +82,7 @@ export const ProjectsSection = () => {
                           href={project.links.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm text-accent-custom font-medium transition-all duration-300 hover:translate-x-1"
+                          className="inline-flex items-center gap-2 text-sm text-accent-custom font-medium transition-all duration-300 hover:translate-x-1 link-underline"
                           aria-label={`View ${project.title} demo (opens in new tab)`}
                         >
                           <span>View Project</span>
@@ -95,7 +95,7 @@ export const ProjectsSection = () => {
                           href={project.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm text-accent-custom font-medium transition-all duration-300 hover:translate-x-1"
+                          className="inline-flex items-center gap-2 text-sm text-accent-custom font-medium transition-all duration-300 hover:translate-x-1 link-underline"
                           aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
                         >
                           <span>GitHub</span>
@@ -131,7 +131,7 @@ export const ProjectsSection = () => {
                           href={project.links.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm text-accent-custom font-medium transition-all duration-300 hover:translate-x-1"
+                          className="inline-flex items-center gap-2 text-sm text-accent-custom font-medium transition-all duration-300 hover:translate-x-1 link-underline"
                           aria-label={`View ${project.title} demo (opens in new tab)`}
                         >
                           <span>View Project</span>
@@ -144,7 +144,7 @@ export const ProjectsSection = () => {
                           href={project.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-sm text-accent-custom font-medium transition-all duration-300 hover:translate-x-1"
+                          className="inline-flex items-center gap-2 text-sm text-accent-custom font-medium transition-all duration-300 hover:translate-x-1 link-underline"
                           aria-label={`View ${project.title} source code on GitHub (opens in new tab)`}
                         >
                           <span>GitHub</span>

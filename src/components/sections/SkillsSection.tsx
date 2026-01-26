@@ -12,6 +12,11 @@ export const SkillsSection = () => {
         Skills
       </h2>
 
+      <p className="section-intro">
+        The languages, frameworks, and platforms I use to deliver production
+        systems.
+      </p>
+
       <div className="space-y-8">
         {skillCategories.map((category) => (
           <div key={category.category}>

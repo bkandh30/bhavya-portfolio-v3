@@ -8,6 +8,9 @@ export const AboutSection = () => {
       <h2 id="about-heading" className="section-heading">
         About
       </h2>
+      <p className="section-intro">
+        A quick snapshot of who I am and the kinds of systems I enjoy building.
+      </p>
       <div className="space-y-4 p-6 rounded-lg bg-card-custom border border-[rgba(201,100,66,0.2)] min-h-[200px]">
         <p className="text-[#3d3929] text-base font-normal leading-[1.6]">
           I'm a software engineer with a focus on building reliable backend

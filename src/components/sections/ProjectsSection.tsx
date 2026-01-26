@@ -15,6 +15,11 @@ export const ProjectsSection = () => {
         Projects
       </h2>
 
+      <p className="section-intro">
+        Selected backend and platform work, from production services to
+        experiments.
+      </p>
+
       <ul className="space-y-8" role="list">
         {projects.map((project) => (
           <li key={project.id} role="listitem">

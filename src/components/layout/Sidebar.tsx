@@ -67,7 +67,7 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
         </div>
 
         <div className="mt-6 rounded-lg border border-[rgba(185,91,62,0.2)] bg-card-custom p-4">
-          <p className="text-xs uppercase text-secondary-custom font-semibold">
+          <p className="text-xs uppercase text-secondary-custom font-bold">
             Now
           </p>
           <p className="mt-2 text-sm text-primary-custom">

@@ -15,6 +15,11 @@ export const ExperienceSection = () => {
         Experience
       </h2>
 
+      <p className="section-intro">
+        Roles where I shipped backend infrastructure, automation, and developer
+        tooling.
+      </p>
+
       <ul className="space-y-8" role="list">
         {experiences.map((exp) => (
           <li key={exp.id} role="listitem">

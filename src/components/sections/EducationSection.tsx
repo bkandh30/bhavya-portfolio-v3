@@ -15,6 +15,10 @@ export const EducationSection = () => {
         Education
       </h2>
 
+      <p className="section-intro">
+        Academic background and coursework that shaped my systems focus.
+      </p>
+
       <ul className="space-y-8" role="list">
         {education.map((edu) => (
           <li key={edu.id} role="listitem">

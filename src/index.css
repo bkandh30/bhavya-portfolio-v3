@@ -74,6 +74,14 @@
   font-family: "Open Sans", var(--font-body);
 }
 
+@utility section-intro {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 40rem;
+}
+
 @utility date-range {
   font-size: 0.75rem;
   color: var(--color-text-secondary);

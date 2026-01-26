@@ -9,7 +9,9 @@ export const Footer = () => {
           <span className="text-accent-custom">Tailwind CSS</span> and
           <span className="text-accent-custom"> Shadcn/UI</span>, and deployed
           on <span className="text-accent-custom">Vercel</span>. Text is set in
-          the <span className="text-accent-custom">Inter</span> typeface.
+          <span className="text-accent-custom">Fraunces</span>,
+          <span className="text-accent-custom"> Source Sans 3</span>, and
+          <span className="text-accent-custom"> IBM Plex Mono</span>.
         </p>
         <p className="text-xs text-secondary-custom mt-2">
           © {new Date().getFullYear()} Bhavya Kandhari. All rights reserved.

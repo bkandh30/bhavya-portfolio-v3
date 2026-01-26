@@ -1,4 +1,63 @@
-/* Self-hosted Inter font */
+/* Self-hosted fonts */
+
+/* Fraunces - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/fraunces/fraunces-600-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/fraunces/fraunces-700-latin.woff2') format('woff2');
+}
+
+/* Source Sans 3 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/source-sans-3/source-sans-3-400-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/source-sans-3/source-sans-3-500-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/source-sans-3/source-sans-3-600-latin.woff2') format('woff2');
+}
+
+/* IBM Plex Mono - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/ibm-plex-mono/ibm-plex-mono-400-latin.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/ibm-plex-mono/ibm-plex-mono-500-latin.woff2') format('woff2');
+}
 
 /* inter-300 - latin */
 @font-face {

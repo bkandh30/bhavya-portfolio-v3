@@ -17,7 +17,7 @@ export const MobileHeader = () => {
         />
       </div>
 
-      <h1 className="text-4xl font-bold mb-2 text-[hsl(48_20%_20%)]">
+      <h1 className="text-4xl font-extrabold mb-2 text-[hsl(48_20%_20%)]">
         {personalInfo.name}
       </h1>
 

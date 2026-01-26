@@ -59,6 +59,15 @@
   src: url('/fonts/ibm-plex-mono/ibm-plex-mono-500-latin.woff2') format('woff2');
 }
 
+/* Open Sans - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/open-sans/open-sans-700-latin.woff2') format('woff2');
+}
+
 /* inter-300 - latin */
 @font-face {
 	font-display: swap;

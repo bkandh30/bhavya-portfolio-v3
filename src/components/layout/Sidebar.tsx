@@ -28,7 +28,7 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
           />
         </div>
 
-        <h1 className="text-5xl font-bold mb-2 text-[hsl(48_20%_20%)]">
+        <h1 className="text-5xl font-extrabold mb-2 text-[hsl(48_20%_20%)]">
           {personalInfo.name}
         </h1>
 

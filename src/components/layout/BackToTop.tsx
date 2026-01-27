@@ -1,21 +1,12 @@
-import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { SPACING } from "@/constants/theme";
+import { useScrollState } from "@/hooks/useScrollState";
 
 export const BackToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const toggleVisibility = (): void => {
-      // Simplified: directly set boolean value instead of conditional branches
-      setIsVisible(window.scrollY > SPACING.scroll.threshold);
-    };
-
-    window.addEventListener("scroll", toggleVisibility, { passive: true });
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
+  const { scrollY } = useScrollState();
+  const isVisible = scrollY > SPACING.scroll.threshold;
 
   const scrollToTop = (): void => {
     window.scrollTo({

@@ -432,6 +432,12 @@ img {
   content-visibility: auto;
 }
 
+/* Optimize off-screen section rendering */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

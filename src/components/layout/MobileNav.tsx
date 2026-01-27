@@ -55,7 +55,7 @@ export const MobileNav = ({
       <div
         id="mobile-navigation"
         className={cn(
-          "fixed inset-0 z-40 bg-background/95 backdrop-blur-sm lg:hidden flex items-center justify-center transition-all duration-300 ease-in-out",
+          "fixed inset-0 z-40 bg-background/95 backdrop-blur-sm lg:hidden flex items-center justify-center transition-all duration-300 ease-in-out overscroll-contain",
           isOpen
             ? "opacity-100 visible"
             : "opacity-0 invisible pointer-events-none"

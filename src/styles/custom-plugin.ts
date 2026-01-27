@@ -3,7 +3,8 @@ import plugin from 'tailwindcss/plugin';
 export const customPlugin = plugin(({ addComponents, addUtilities }) => {
   addComponents({
     '.card-hover': {
-      '@apply relative p-6 rounded-lg transition-all duration-300 overflow-hidden border': {},
+      '@apply relative p-6 rounded-lg overflow-hidden border': {},
+      transition: 'background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease',
       borderColor: 'rgba(201, 100, 66, 0.1)',
       '&:hover': {
         backgroundColor: '#ede9de',

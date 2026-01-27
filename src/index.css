@@ -33,7 +33,9 @@
   position: relative;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
   border: 1px solid var(--color-border-default);
 
@@ -59,7 +61,7 @@
   width: 0.25rem;
   height: var(--spacing-card-border-default);
   background-color: var(--color-primary);
-  transition: all 0.3s ease;
+  transition: height 0.3s ease;
 }
 
 @utility section-heading {
@@ -112,7 +114,7 @@
   color: var(--color-text-primary);
   border: 1px solid rgba(185, 91, 62, 0.2);
   box-shadow: 0 1px 2px rgba(47, 42, 35, 0.06);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: scale(1.05);
@@ -130,7 +132,7 @@
   color: var(--color-text-primary);
   border: 1px solid rgba(185, 91, 62, 0.2);
   box-shadow: 0 1px 2px rgba(47, 42, 35, 0.06);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
 
   &:hover {
@@ -348,7 +350,7 @@
   }
 
   .hover-lift {
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
   }
 
   .hover-lift:hover {
@@ -356,7 +358,7 @@
   }
 
   .glow-effect {
-    transition: all 0.3s ease;
+    transition: box-shadow 0.3s ease;
   }
 
   .glow-effect:hover {

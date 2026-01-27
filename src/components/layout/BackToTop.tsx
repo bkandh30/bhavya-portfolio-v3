@@ -9,14 +9,11 @@ export const BackToTop = () => {
 
   useEffect(() => {
     const toggleVisibility = (): void => {
-      if (window.scrollY > SPACING.scroll.threshold) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      // Simplified: directly set boolean value instead of conditional branches
+      setIsVisible(window.scrollY > SPACING.scroll.threshold);
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 

@@ -1,10 +1,11 @@
+import { memo } from "react";
 import { education } from "@/data/education";
 import {
   SectionCard,
   SectionCardLayout,
 } from "@/components/shared/SectionCard";
 
-export const EducationSection = () => {
+export const EducationSection = memo(function EducationSection() {
   return (
     <section
       id="education"
@@ -35,4 +36,4 @@ export const EducationSection = () => {
       </ul>
     </section>
   );
-};
+});

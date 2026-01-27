@@ -1,10 +1,11 @@
+import { memo } from "react";
 import { experiences } from "@/data/experience";
 import {
   SectionCard,
   SectionCardLayout,
 } from "@/components/shared/SectionCard";
 
-export const ExperienceSection = () => {
+export const ExperienceSection = memo(function ExperienceSection() {
   return (
     <section
       id="experience"
@@ -46,4 +47,4 @@ export const ExperienceSection = () => {
       </ul>
     </section>
   );
-};
+});

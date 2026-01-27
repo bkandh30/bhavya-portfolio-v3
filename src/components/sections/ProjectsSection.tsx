@@ -1,10 +1,11 @@
 import type React from "react";
+import { memo } from "react";
 import { ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 import { SectionCard } from "@/components/shared/SectionCard";
 import { getIconSlug } from "@/utils/icon-mapping";
 
-export const ProjectsSection = () => {
+export const ProjectsSection = memo(function ProjectsSection() {
   const featuredProjects = projects.filter((project) => project.featured);
   const otherProjects = projects.filter((project) => !project.featured);
 
@@ -163,4 +164,4 @@ export const ProjectsSection = () => {
       </div>
     </section>
   );
-};
+});

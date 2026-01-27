@@ -1,4 +1,6 @@
-export const AboutSection = () => {
+import { memo } from "react";
+
+export const AboutSection = memo(function AboutSection() {
   return (
     <section
       id="about"
@@ -36,4 +38,4 @@ export const AboutSection = () => {
       </div>
     </section>
   );
-};
+});

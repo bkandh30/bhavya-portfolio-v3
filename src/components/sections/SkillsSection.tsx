@@ -1,7 +1,8 @@
+import { memo } from "react";
 import { skillCategories } from "@/data/skills";
 import { getIconSlug } from "@/utils/icon-mapping";
 
-export const SkillsSection = () => {
+export const SkillsSection = memo(function SkillsSection() {
   return (
     <section
       id="skills"
@@ -64,4 +65,4 @@ export const SkillsSection = () => {
       </div>
     </section>
   );
-};
+});

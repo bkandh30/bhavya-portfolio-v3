@@ -75,6 +75,13 @@ export const MobileNav = ({
                 scrollToSection(section.id);
                 setIsOpen(false);
               }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  scrollToSection(section.id);
+                  setIsOpen(false);
+                }
+              }}
               className={cn(
                 "text-3xl font-medium tracking-widest uppercase transition-all duration-200 hover:scale-110",
                 activeSection === section.id

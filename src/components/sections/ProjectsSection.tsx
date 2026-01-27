@@ -60,6 +60,8 @@ export const ProjectsSection = () => {
                               <img
                                 src={`https://cdn.simpleicons.org/${iconSlug}`}
                                 alt=""
+                                width={14}
+                                height={14}
                                 className="w-3.5 h-3.5 opacity-70"
                                 loading="lazy"
                                 aria-hidden="true"

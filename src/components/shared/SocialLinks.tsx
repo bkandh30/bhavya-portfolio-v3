@@ -29,6 +29,8 @@ export const SocialLinks = ({ className = "" }: SocialLinksProps) => {
             <img
               src="https://cdn.simpleicons.org/github"
               alt=""
+              width={28}
+              height={28}
               className="w-7 h-7"
               loading="lazy"
               aria-hidden="true"

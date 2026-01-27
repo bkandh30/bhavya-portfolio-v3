@@ -47,7 +47,7 @@ const NotFound = () => {
                 color: "white",
               }}
             >
-              <Home className="w-4 h-4" />
+              <Home className="w-4 h-4" aria-hidden="true" />
               Return to Home
             </Button>
           </Link>

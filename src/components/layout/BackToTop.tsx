@@ -42,7 +42,7 @@ export const BackToTop = () => {
         className="rounded-full h-12 w-12 shadow-xl border border-white/20 bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-110 active:scale-95 transition-all"
         aria-label="Scroll to top"
       >
-        <ArrowUp className="h-6 w-6" strokeWidth={2.5} />
+        <ArrowUp className="h-6 w-6" strokeWidth={2.5} aria-hidden="true" />
       </Button>
     </div>
   );

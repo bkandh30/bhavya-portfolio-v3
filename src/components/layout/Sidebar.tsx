@@ -36,7 +36,7 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
           {personalInfo.name}
         </h1>
 
-        <p className="text-sm font-bold text-secondary-custom">
+        <p className="text-base font-bold text-secondary-custom">
           {personalInfo.title}
         </p>
 

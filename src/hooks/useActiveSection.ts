@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react";
+import { useMemo } from "react";
 import { useScrollState } from "@/hooks/useScrollState";
 
 export function useActiveSection(sectionIds: readonly string[]): string {
-  const [activeSection, setActiveSection] = useState(sectionIds[0] || '');
   const { scrollY, viewportHeight } = useScrollState();
 
-  useEffect(() => {
+  return useMemo(() => {
+    if (typeof document === "undefined") {
+      return sectionIds[0] || "";
+    }
+
     const scrollPosition = scrollY + viewportHeight / 2;
     let nextSection = sectionIds[0] || "";
 
@@ -23,8 +26,6 @@ export function useActiveSection(sectionIds: readonly string[]): string {
       }
     }
 
-    setActiveSection((prev) => (prev === nextSection ? prev : nextSection));
+    return nextSection;
   }, [scrollY, viewportHeight, sectionIds]);
-
-  return activeSection;
 }

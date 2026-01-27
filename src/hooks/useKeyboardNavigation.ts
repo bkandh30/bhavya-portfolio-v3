@@ -1,10 +1,19 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useMemo } from 'react';
 
 export function useKeyboardNavigation(
   sectionIds: readonly string[],
   activeSection: string,
   scrollToSection: (id: string) => void
 ): void {
+  // Create a Map for O(1) index lookup instead of O(n) indexOf
+  const sectionIndexMap = useMemo(() => {
+    const map = new Map<string, number>();
+    sectionIds.forEach((id, index) => {
+      map.set(id, index);
+    });
+    return map;
+  }, [sectionIds]);
+
   const handleKeyDown = useCallback(
     (event: KeyboardEvent): void => {
       if (!event.altKey) return;
@@ -12,8 +21,9 @@ export function useKeyboardNavigation(
 
       event.preventDefault();
 
-      const currentIndex = sectionIds.indexOf(activeSection);
-      if (currentIndex === -1) return;
+      // O(1) Map lookup instead of O(n) indexOf
+      const currentIndex = sectionIndexMap.get(activeSection);
+      if (currentIndex === undefined) return;
 
       let nextIndex: number;
       if (event.key === 'ArrowDown') {
@@ -24,7 +34,7 @@ export function useKeyboardNavigation(
 
       scrollToSection(sectionIds[nextIndex]);
     },
-    [sectionIds, activeSection, scrollToSection]
+    [sectionIds, sectionIndexMap, activeSection, scrollToSection]
   );
 
   useEffect(() => {

@@ -12,7 +12,7 @@ export const Footer = () => {
           the <span className="text-accent-custom">Inter</span> typeface.
         </p>
         <p className="text-xs text-secondary-custom mt-2">
-          © {new Date().getFullYear()} Bhavya Kandhari. All rights reserved.
+          © {new Intl.DateTimeFormat("en", { year: "numeric" }).format(new Date())} Bhavya Kandhari. All rights reserved.
         </p>
       </div>
     </footer>

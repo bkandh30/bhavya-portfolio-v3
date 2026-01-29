@@ -1,30 +1,28 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-export function useFadeInObserver(enabled: boolean = true): void {
+export function useFadeInObserver(): void {
   useEffect(() => {
-    if (!enabled) return;
-
     const observerOptions: IntersectionObserverInit = {
       threshold: 0.1,
-      rootMargin: "0px 0px -100px 0px",
+      rootMargin: '0px 0px -100px 0px',
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("fade-in-visible");
+          entry.target.classList.add('fade-in-visible');
         }
       });
     }, observerOptions);
 
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
-      section.classList.add("fade-in-section");
+      section.classList.add('fade-in-section');
       observer.observe(section);
     });
 
     return () => {
       observer.disconnect();
     };
-  }, [enabled]);
+  }, []);
 }

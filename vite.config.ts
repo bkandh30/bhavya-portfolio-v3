@@ -22,8 +22,10 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ["console.log", "console.info"],
-        passes: 2,
+        pure_funcs: ["console.log", "console.info", "console.warn"],
+        passes: 3,
+        dead_code: true,
+        unused: true,
       },
       mangle: {
         safari10: true,
@@ -36,24 +38,54 @@ export default defineConfig({
     // Optimize chunk splitting
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Vendor chunks
-          "react-vendor": ["react", "react-dom", "react-router-dom"],
-          "ui-vendor": [
-            "@radix-ui/react-avatar",
-            "@radix-ui/react-slot",
-            "@radix-ui/react-tooltip",
-          ],
-          "query-vendor": ["@tanstack/react-query"],
-
-          // Utility chunks
-          utils: ["clsx", "tailwind-merge", "class-variance-authority"],
+        // CHANGED: Function-based manualChunks instead of object
+        manualChunks: (id) => {
+          // React core - essential, load first
+          if (
+            id.includes("node_modules/react/") ||
+            id.includes("node_modules/react-dom/")
+          ) {
+            return "react-core";
+          }
+          // Router - needed for navigation
+          if (id.includes("node_modules/react-router")) {
+            return "router";
+          }
+          // Radix UI components - split separately
+          if (id.includes("node_modules/@radix-ui")) {
+            return "radix";
+          }
+          // Lucide icons - only used icons should be included
+          if (id.includes("node_modules/lucide-react")) {
+            return "icons";
+          }
+          // TanStack Query - lazy load since not heavily used
+          if (id.includes("node_modules/@tanstack")) {
+            return "query";
+          }
+          // Toast notifications
+          if (id.includes("node_modules/sonner")) {
+            return "toast";
+          }
+          // Utility libraries
+          if (
+            id.includes("node_modules/clsx") ||
+            id.includes("node_modules/tailwind-merge") ||
+            id.includes("node_modules/class-variance-authority")
+          ) {
+            return "utils";
+          }
         },
 
         // Optimize chunk naming for better caching
         chunkFileNames: "assets/[name]-[hash].js",
         entryFileNames: "assets/[name]-[hash].js",
         assetFileNames: "assets/[name]-[hash].[ext]",
+      },
+      // ADDED: Explicit tree-shake configuration for better dead code elimination
+      treeshake: {
+        moduleSideEffects: false,
+        preset: "recommended",
       },
     },
 
@@ -65,14 +97,14 @@ export default defineConfig({
     sourcemap: false,
 
     // Optimize chunk size
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
 
     // Target modern browsers for smaller bundles
-    target: "es2020",
+    target: "esnext",
 
-    // Enable module preload polyfill
+    // Disable polyfill since modern browsers don't use it
     modulePreload: {
-      polyfill: true,
+      polyfill: false,
     },
 
     // Compression
@@ -84,15 +116,8 @@ export default defineConfig({
 
   // Optimize dependencies
   optimizeDeps: {
-    include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "@radix-ui/react-avatar",
-      "@radix-ui/react-slot",
-      "@radix-ui/react-tooltip",
-    ],
-    exclude: [],
+    include: ["react", "react-dom", "react-router-dom"],
+    exclude: ["@tanstack/react-query"],
   },
 
   css: {
@@ -100,6 +125,11 @@ export default defineConfig({
       localsConvention: "camelCase",
     },
     devSourcemap: false,
+  },
+
+  esbuild: {
+    treeShaking: true,
+    legalComments: "none",
   },
 
   // Preview server config

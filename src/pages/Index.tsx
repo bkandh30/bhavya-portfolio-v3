@@ -17,6 +17,8 @@ import { useScrollToSection } from "@/hooks/useScrollToSection";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
 import { usePerformanceMonitor } from "@/hooks/usePerformanceMonitor";
+/* CLS FIX: Added useEffect and useState imports */
+import { useEffect, useState } from "react";
 
 const SECTION_IDS = [
   "about",
@@ -42,8 +44,22 @@ const Index = () => {
   const activeSection = useActiveSection(SECTION_IDS);
   const scrollToSection = useScrollToSection();
 
+  /* CLS FIX: Track if we're on mobile to disable CLS-causing animations */
+  const [isMobile, setIsMobile] = useState(false);
+
+  /* CLS FIX: Check if mobile on mount and resize */
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   useSmoothScroll();
-  useFadeInObserver();
+
+  /* CLS FIX: Only enable fade-in animations on desktop to prevent CLS on mobile */
+  useFadeInObserver(!isMobile);
+
   useKeyboardNavigation(SECTION_IDS, activeSection, scrollToSection);
   useMousePosition(true);
   usePerformanceMonitor();
@@ -51,7 +67,11 @@ const Index = () => {
   return (
     <div
       className="min-h-screen relative"
-      style={{ backgroundColor: "hsl(48 38% 96%)" }}
+      style={{
+        backgroundColor: "hsl(48 38% 96%)",
+        /* CLS FIX: Added CSS containment to isolate layout calculations */
+        contain: "layout style",
+      }}
     >
       {/* Skip to content link for keyboard users */}
       <SkipToContent />
@@ -79,6 +99,10 @@ const Index = () => {
         tabIndex={-1}
         role="main"
         aria-label="Main content"
+        /* CLS FIX: Added CSS containment */
+        style={{
+          contain: "layout style",
+        }}
       >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 space-y-10 sm:space-y-12">
           {/* Mobile Hero - Only visible on small screens */}

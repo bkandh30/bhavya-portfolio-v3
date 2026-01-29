@@ -19,13 +19,11 @@ const SLUG_MAP = new Map<string, string>([
   ["Express.js", "express"],
   ["Vue.js", "vuedotjs"],
   ["FastAPI", "fastapi"],
-  ["Warp", "warp"],
   ["Drizzle", "drizzle"],
-  ["Celery", "celery"],
 
   // Frontend
   ["HTML", "html5"],
-  ["CSS", "css3"],
+  ["CSS", "css"],
   ["TailwindCSS", "tailwindcss"],
   ["Tailwind CSS", "tailwindcss"],
 
@@ -36,16 +34,10 @@ const SLUG_MAP = new Map<string, string>([
   ["Redis", "redis"],
   ["Turso", "turso"],
   ["Upstash Redis", "upstash"],
-  ["DynamoDB", "amazondynamodb"],
-  ["BoltDB", "boltdb"],
 
   // Cloud & Infrastructure
-  ["AWS", "amazonwebservices"],
   ["Docker", "docker"],
   ["Kubernetes", "kubernetes"],
-  ["Lambda", "awslambda"],
-  ["S3", "amazons3"],
-  ["CloudFront", "amazoncloudfront"],
   ["Vercel", "vercel"],
 
   // DevOps & Tools
@@ -58,11 +50,6 @@ const SLUG_MAP = new Map<string, string>([
 
   // Auth
   ["JWT", "jsonwebtokens"],
-
-  // Analytics
-  ["Power BI", "powerbi"],
-  ["Tableau", "tableau"],
-  ["AWS QuickSight", "amazonquicksight"],
 ]);
 
 // Module-level Set for O(1) generic term lookups
@@ -75,12 +62,26 @@ const GENERIC_TERMS = new Set<string>([
   "Fault Tolerance",
   "Observability",
   "Version Control",
+
   "SQLx",
   "Logging",
   "Metrics",
   "AsyncIO",
   "NLTK",
   "CI/CD",
+  "Warp",
+  "Celery",
+  "BoltBD",
+
+  "AWS",
+  "Lambda",
+  "S3",
+  "CloudFront",
+  "DynamoDB",
+  "AWS Quicksight",
+
+  "Power BI",
+  "Tableau",
 ]);
 
 export function getIconSlug(tech: string): string | null {

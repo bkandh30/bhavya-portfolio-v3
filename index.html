@@ -6,13 +6,6 @@
 
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-        <!-- Preconnect to external domains -->
-        <link rel="preconnect" href="https://cdn.simpleicons.org" />
-        <link rel="dns-prefetch" href="https://cdn.simpleicons.org" />
-
-        <!--Preload main CSS to prevent render blocking -->
-        <link rel="preload" href="src/index.css" as="style" />
-
         <!-- Preload critical fonts -->
         <link
             rel="preload"
@@ -28,6 +21,13 @@
             type="font/woff2"
             crossorigin="anonymous"
         />
+
+        <!--Preload main CSS to prevent render blocking -->
+        <link rel="preload" href="src/index.css" as="style" />
+
+        <!-- Preconnect to external domains -->
+        <link rel="preconnect" href="https://cdn.simpleicons.org" />
+        <link rel="dns-prefetch" href="https://cdn.simpleicons.org" />
 
         <!-- Preload critical images -->
         <link
@@ -84,6 +84,24 @@
 
         <title>Bhavya Kandhari - Software Engineer</title>
         <style>
+            /* Critical font-face declarations - loaded before external CSS */
+            @font-face {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 400;
+                font-display: optional;
+                src: url("/fonts/inter/inter-v20-latin-regular.woff2")
+                    format("woff2");
+            }
+            @font-face {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 700;
+                font-display: optional;
+                src: url("/fonts/inter/inter-v20-latin-700.woff2")
+                    format("woff2");
+            }
+
             /* Critical CSS - inlined to prevent FOUC and CLS */
             html,
             body,

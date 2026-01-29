@@ -5,12 +5,21 @@ import { Button } from "@/components/ui/button";
 
 export const MobileHeader = () => {
   const emailLink = personalInfo.social.find(
-    (link) => link.platform === "email"
+    (link) => link.platform === "email",
   )?.url;
 
   return (
     <section className="lg:hidden">
-      <div className="relative h-24 w-24 mb-6 ring-2 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg rounded-full overflow-hidden">
+      {/* Avatar container with explicit dimensions to prevent CLS */}
+      <div
+        className="relative mb-6 ring-2 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg rounded-full overflow-hidden"
+        style={{
+          width: 96,
+          height: 96,
+          minWidth: 96,
+          minHeight: 96,
+        }}
+      >
         <OptimizedImage
           src={personalInfo.avatar.png}
           webpSrc={personalInfo.avatar.webp}
@@ -22,11 +31,19 @@ export const MobileHeader = () => {
         />
       </div>
 
-      <h1 className="text-4xl font-bold mb-2 text-[hsl(48_20%_20%)]">
+      {/* Name with min-height to reserve space */}
+      <h1
+        className="text-4xl font-bold mb-2 text-[hsl(48_20%_20%)]"
+        style={{ minHeight: "2.75rem" }}
+      >
         {personalInfo.name}
       </h1>
 
-      <p className="text-base font-bold text-secondary-custom">
+      {/* Title with min-height */}
+      <p
+        className="text-base font-bold text-secondary-custom"
+        style={{ minHeight: "1.5rem" }}
+      >
         {personalInfo.title}
       </p>
 
@@ -50,7 +67,12 @@ export const MobileHeader = () => {
           <a href="#projects">Featured Work</a>
         </Button>
         {emailLink && (
-          <Button asChild size="sm" variant="outline" className="rounded-full text-xs">
+          <Button
+            asChild
+            size="sm"
+            variant="outline"
+            className="rounded-full text-xs"
+          >
             <a href={emailLink}>Contact</a>
           </Button>
         )}

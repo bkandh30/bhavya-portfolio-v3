@@ -11,7 +11,7 @@ interface SidebarProps {
 export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
   const sections = ["about", "experience", "skills", "education", "projects"];
   const emailLink = personalInfo.social.find(
-    (link) => link.platform === "email"
+    (link) => link.platform === "email",
   )?.url;
 
   return (
@@ -20,7 +20,16 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
       aria-label="Profile and navigation"
     >
       <div className="max-w-md w-full">
-        <div className="relative h-28 w-28 mb-6 ring-1 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg rounded-full overflow-hidden">
+        {/* Avatar container with explicit dimensions to prevent CLS */}
+        <div
+          className="relative mb-6 ring-1 ring-primary/20 ring-offset-4 ring-offset-background shadow-lg rounded-full overflow-hidden"
+          style={{
+            width: 112,
+            height: 112,
+            minWidth: 112,
+            minHeight: 112,
+          }}
+        >
           <OptimizedImage
             src={personalInfo.avatar.png}
             webpSrc={personalInfo.avatar.webp}
@@ -32,11 +41,19 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
           />
         </div>
 
-        <h1 className="text-5xl font-bold mb-2 text-[hsl(48_20%_20%)]">
+        {/* Name - explicit min-height to reserve space */}
+        <h1
+          className="text-5xl font-bold mb-2 text-[hsl(48_20%_20%)]"
+          style={{ minHeight: "3.5rem" }}
+        >
           {personalInfo.name}
         </h1>
 
-        <p className="text-base font-bold text-secondary-custom">
+        {/* Title - explicit min-height */}
+        <p
+          className="text-base font-bold text-secondary-custom"
+          style={{ minHeight: "1.5rem" }}
+        >
           {personalInfo.title}
         </p>
 
@@ -60,7 +77,12 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
             Featured Work
           </Button>
           {emailLink && (
-            <Button asChild size="sm" variant="outline" className="rounded-full text-xs">
+            <Button
+              asChild
+              size="sm"
+              variant="outline"
+              className="rounded-full text-xs"
+            >
               <a href={emailLink}>Contact</a>
             </Button>
           )}
@@ -76,9 +98,11 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
           </p>
         </div>
 
-
         {/* Navigation */}
-        <nav className="mb-12 mt-10 hidden lg:block" aria-label="Main navigation">
+        <nav
+          className="mb-12 mt-10 hidden lg:block"
+          aria-label="Main navigation"
+        >
           <ul className="space-y-4">
             {sections.map((section) => (
               <li key={section}>

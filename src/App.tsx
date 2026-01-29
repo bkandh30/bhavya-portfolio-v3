@@ -21,17 +21,21 @@ const queryClient = new QueryClient({
 
 const PageLoadingFallback = () => (
   <div
-    className="min-h-screen flex items-center justify-center p-4"
+    className="min-h-screen"
     style={{ backgroundColor: "hsl(48 38% 96%)" }}
+    aria-label="Loading page content"
+    role="status"
   >
-    <div className="max-w-md w-full space-y-4">
-      <Skeleton className="h-12 w-3/4" />
-      <Skeleton className="h-8 w-1/2" />
-      <Skeleton className="h-24 w-full" />
-      <div className="flex gap-4">
-        <Skeleton className="h-10 w-24" />
-        <Skeleton className="h-10 w-24" />
-        <Skeleton className="h-10 w-24" />
+    {/* Reserve space for the layout without causing shifts */}
+    <div className="lg:ml-[45%] min-h-screen">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+        {/* Invisible placeholder that matches content structure */}
+        <div style={{ visibility: "hidden" }}>
+          <div className="h-28 w-28 mb-6 rounded-full" />
+          <div className="h-12 w-64 mb-2" />
+          <div className="h-6 w-48 mb-4" />
+          <div className="h-20 w-full" />
+        </div>
       </div>
     </div>
   </div>

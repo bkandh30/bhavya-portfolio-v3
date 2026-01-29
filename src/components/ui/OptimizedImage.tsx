@@ -48,9 +48,16 @@ export const OptimizedImage = ({
   }
 
   return (
-    <div className="relative" style={{ width, height }}>
+    <div
+      className="relative overflow-hidden"
+      style={{ width, height, minWidth: width, minHeight: height }}
+    >
       {isLoading && (
-        <Skeleton className="absolute inset-0" style={{ width, height }} />
+        <Skeleton
+          className="absolute inset-0 bg-muted/30"
+          style={{ opacity: isLoading ? 1 : 0, transition: "ease-out" }}
+          aria-hidden="true"
+        />
       )}
       <picture>
         {webpSrc && <source srcSet={webpSrc} type="image/webp" />}
@@ -67,6 +74,11 @@ export const OptimizedImage = ({
           onLoad={handleLoad}
           onError={handleError}
           decoding="async"
+          style={{
+            width,
+            height,
+            objectFit: "cover",
+          }}
         />
       </picture>
     </div>

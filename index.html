@@ -1,83 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" style="color-scheme: light dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://cdn.simpleicons.org" />
-    <link rel="dns-prefetch" href="https://cdn.simpleicons.org" />
+        <!-- Preconnect to external domains -->
+        <link rel="preconnect" href="https://cdn.simpleicons.org" />
+        <link rel="dns-prefetch" href="https://cdn.simpleicons.org" />
 
-    <!-- Preload critical fonts -->
-    <link
-      rel="preload"
-      href="/fonts/inter/inter-v20-latin-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/inter/inter-v20-latin-600.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
+        <!-- Preload critical fonts -->
+        <link
+            rel="preload"
+            href="/fonts/inter/inter-v20-latin-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="/fonts/inter/inter-v20-latin-600.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
 
-    <!-- Preload critical images -->
-    <link
-      rel="preload"
-      href="/headshot-small.webp"
-      as="image"
-      type="image/webp"
-    />
+        <!-- Preload critical images -->
+        <link
+            rel="preload"
+            href="/headshot-small.webp"
+            as="image"
+            type="image/webp"
+        />
 
-    <!-- Meta tags -->
-    <meta
-      name="description"
-      content="Bhavya Kandhari - Software Engineer specializing in full-stack development, cloud computing, and distributed systems."
-    />
-    <meta
-      name="keywords"
-      content="Bhavya Kandhari, Software Engineer, Full Stack Developer, React, TypeScript, AWS, Portfolio"
-    />
-    <meta name="author" content="Bhavya Kandhari" />
+        <!-- Meta tags -->
+        <meta
+            name="description"
+            content="Bhavya Kandhari - Software Engineer specializing in full-stack development, cloud computing, and distributed systems."
+        />
+        <meta
+            name="keywords"
+            content="Bhavya Kandhari, Software Engineer, Full Stack Developer, React, TypeScript, AWS, Portfolio"
+        />
+        <meta name="author" content="Bhavya Kandhari" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Bhavya Kandhari - Software Engineer" />
-    <meta
-      property="og:description"
-      content="Software Engineer specializing in full-stack development, data engineering, cloud computing, and distributed systems."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://bhavyakandhari.vercel.app/" />
-    <meta
-      property="og:image"
-      content="https://bhavyakandhari.vercel.app/og-image.png"
-    />
+        <!-- Open Graph -->
+        <meta
+            property="og:title"
+            content="Bhavya Kandhari - Software Engineer"
+        />
+        <meta
+            property="og:description"
+            content="Software Engineer specializing in full-stack development, data engineering, cloud computing, and distributed systems."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://bhavyakandhari.vercel.app/" />
+        <meta
+            property="og:image"
+            content="https://bhavyakandhari.vercel.app/og-image.png"
+        />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bhavya Kandhari - Software Engineer" />
-    <meta
-      name="twitter:description"
-      content="Software Engineer specializing in full-stack development, cloud computing, and distributed systems."
-    />
-    <meta
-      name="twitter:image"
-      content="https://bhavyakandhari.vercel.app/og-image.png"
-    />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Bhavya Kandhari - Software Engineer"
+        />
+        <meta
+            name="twitter:description"
+            content="Software Engineer specializing in full-stack development, cloud computing, and distributed systems."
+        />
+        <meta
+            name="twitter:image"
+            content="https://bhavyakandhari.vercel.app/og-image.png"
+        />
 
-    <!-- Performance hints -->
-    <meta name="theme-color" content="#c96442" />
+        <!-- Performance hints -->
+        <meta name="theme-color" content="#c96442" />
 
-    <title>Bhavya Kandhari - Software Engineer</title>
-  </head>
+        <title>Bhavya Kandhari - Software Engineer</title>
+        <style>
+            /* Critical CSS - inlined to prevent FOUC and CLS */
+            html,
+            body,
+            #root {
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+                background-color: hsl(48 38% 96%);
+            }
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+            /* Fallback font stack with size-adjust to minimize CLS */
+            body {
+                font-family:
+                    "Inter",
+                    ui-sans-serif,
+                    system-ui,
+                    -apple-system,
+                    BlinkMacSystemFont,
+                    "Segoe UI",
+                    Roboto,
+                    "Helvetica Neue",
+                    Arial,
+                    sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            /* Reserve space for main layout to prevent CLS */
+            @media (min-width: 1024px) {
+                #root > div {
+                    min-height: 100vh;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="root"></div>
+        <script type="module" src="/src/main.tsx"></script>
+    </body>
 </html>

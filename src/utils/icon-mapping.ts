@@ -63,6 +63,7 @@ const GENERIC_TERMS = new Set<string>([
   "Observability",
   "Version Control",
 
+  "SQL",
   "SQLx",
   "Logging",
   "Metrics",
@@ -71,14 +72,14 @@ const GENERIC_TERMS = new Set<string>([
   "CI/CD",
   "Warp",
   "Celery",
-  "BoltBD",
+  "BoltDB",
 
   "AWS",
   "Lambda",
   "S3",
   "CloudFront",
   "DynamoDB",
-  "AWS Quicksight",
+  "AWS QuickSight",
 
   "Power BI",
   "Tableau",

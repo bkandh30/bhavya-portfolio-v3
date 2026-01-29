@@ -16,7 +16,21 @@
         />
         <link
             rel="preload"
+            href="/fonts/inter/inter-v20-latin-500.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
             href="/fonts/inter/inter-v20-latin-600.woff2"
+            as="font"
+            type="font/woff2"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="preload"
+            href="/fonts/inter/inter-v20-latin-700.woff2"
             as="font"
             type="font/woff2"
             crossorigin="anonymous"
@@ -96,10 +110,32 @@
             @font-face {
                 font-family: "Inter";
                 font-style: normal;
+                font-weight: 500;
+                font-display: swap;
+                src: url("/fonts/inter/inter-v20-latin-500.woff2")
+                    format("woff2");
+            }
+            @font-face {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: url("/fonts/inter/inter-v20-latin-600.woff2")
+                    format("woff2");
+            }
+            @font-face {
+                font-family: "Inter";
+                font-style: normal;
                 font-weight: 700;
                 font-display: optional;
                 src: url("/fonts/inter/inter-v20-latin-700.woff2")
                     format("woff2");
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
             }
 
             /* Critical CSS - inlined to prevent FOUC and CLS */
@@ -131,7 +167,30 @@
 
             /* Reserve space for main layout to prevent CLS */
             @media (min-width: 1024px) {
-                #root > div {
+                .layout-container {
+                    display: flex;
+                    min-height: 100vh;
+                }
+                .sidebar-placeholder {
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 45%;
+                    height: 100vh;
+                }
+                .main-content-placeholder {
+                    margin-left: 45%;
+                    min-height: 100vh;
+                    width: 55%;
+                }
+            }
+
+            @media (max-width: 1023px) {
+                .sidebar-placeholder {
+                    display: none;
+                }
+                .main-content-placeholder {
+                    width: 100%;
                     min-height: 100vh;
                 }
             }
@@ -139,7 +198,12 @@
     </head>
 
     <body>
-        <div id="root"></div>
+        <div id="root">
+            <div class="layout-container">
+                <div class="sidebar-placeholder" aria-hidden="true"></div>
+                <div class="main-content-placeholder" aria-hidden="true"></div>
+            </div>
+        </div>
         <script type="module" src="/src/main.tsx"></script>
     </body>
 </html>

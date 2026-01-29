@@ -2,7 +2,7 @@
 
 /* inter-300 - latin */
 @font-face {
-    font-display: optional;
+    font-display: swap;
     font-family: "Inter";
     font-style: normal;
     font-weight: 300;
@@ -11,7 +11,7 @@
 
 /* inter-regular - latin */
 @font-face {
-    font-display: optional;
+    font-display: swap;
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
@@ -20,7 +20,7 @@
 
 /* inter-500 - latin */
 @font-face {
-    font-display: optional;
+    font-display: swap;
     font-family: "Inter";
     font-style: normal;
     font-weight: 500;
@@ -29,7 +29,7 @@
 
 /* inter-600 - latin */
 @font-face {
-    font-display: optional;
+    font-display: swap;
     font-family: "Inter";
     font-style: normal;
     font-weight: 600;
@@ -38,7 +38,7 @@
 
 /* inter-700 - latin */
 @font-face {
-    font-display: optional;
+    font-display: swap;
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;

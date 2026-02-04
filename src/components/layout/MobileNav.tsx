@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -8,11 +8,14 @@ interface MobileNavProps {
   scrollToSection: (id: string) => void;
 }
 
+const TOGGLE_BUTTON_ID = "mobile-navigation-toggle";
+
 export const MobileNav = ({
   activeSection,
   scrollToSection,
 }: MobileNavProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -24,6 +27,72 @@ export const MobileNav = ({
       document.body.style.overflow = "unset";
     };
   }, [isOpen]);
+
+  const getFocusableElements = useCallback((): HTMLElement[] => {
+    if (!dialogRef.current) return [];
+    const elements = dialogRef.current.querySelectorAll<HTMLElement>(
+      "button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])"
+    );
+
+    return Array.from(elements).filter(
+      (element) =>
+        !element.hasAttribute("disabled") && !element.getAttribute("aria-hidden")
+    );
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      const toggleButton = document.getElementById(TOGGLE_BUTTON_ID);
+      toggleButton?.focus();
+      return;
+    }
+
+    const focusables = getFocusableElements();
+    const target = focusables[0] ?? dialogRef.current;
+    target?.focus();
+  }, [isOpen, getFocusableElements]);
+
+  const handleDialogKeyDown = useCallback((
+    event: React.KeyboardEvent<HTMLDivElement>
+  ): void => {
+    if (!isOpen) return;
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      setIsOpen(false);
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+
+    const focusables = getFocusableElements();
+    if (focusables.length === 0) {
+      event.preventDefault();
+      dialogRef.current?.focus();
+      return;
+    }
+
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    const active = document.activeElement as HTMLElement | null;
+
+    if (!active || !dialogRef.current?.contains(active)) {
+      event.preventDefault();
+      first.focus();
+      return;
+    }
+
+    if (event.shiftKey && active === first) {
+      event.preventDefault();
+      last.focus();
+      return;
+    }
+
+    if (!event.shiftKey && active === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }, [getFocusableElements, isOpen]);
 
   const sections = [
     { id: "about", label: "About" },
@@ -43,6 +112,7 @@ export const MobileNav = ({
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"
+          id={TOGGLE_BUTTON_ID}
         >
           {isOpen ? (
             <X className="h-7 w-7" strokeWidth={2.5} aria-hidden="true" />
@@ -63,6 +133,9 @@ export const MobileNav = ({
         role="dialog"
         aria-modal="true"
         aria-label="Mobile navigation menu"
+        tabIndex={-1}
+        ref={dialogRef}
+        onKeyDown={handleDialogKeyDown}
       >
         <nav
           className="flex flex-col items-center gap-8 p-4"

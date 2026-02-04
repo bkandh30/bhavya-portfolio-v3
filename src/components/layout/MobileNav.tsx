@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { SECTIONS } from "@/constants/sections";
 
 interface MobileNavProps {
   activeSection: string;
@@ -94,14 +95,6 @@ export const MobileNav = ({
     }
   }, [getFocusableElements, isOpen]);
 
-  const sections = [
-    { id: "about", label: "About" },
-    { id: "experience", label: "Experience" },
-    { id: "skills", label: "Skills" },
-    { id: "education", label: "Education" },
-    { id: "projects", label: "Projects" },
-  ];
-
   return (
     <>
       <div className="fixed top-6 right-6 z-50 lg:hidden">
@@ -141,7 +134,7 @@ export const MobileNav = ({
           className="flex flex-col items-center gap-8 p-4"
           aria-label="Main navigation"
         >
-          {sections.map((section) => (
+          {SECTIONS.map((section) => (
             <button
               key={section.id}
               onClick={() => {

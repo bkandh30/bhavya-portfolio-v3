@@ -16,14 +16,7 @@ import { useFadeInObserver } from "@/hooks/useFadeInObserver";
 import { useScrollToSection } from "@/hooks/useScrollToSection";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
-
-const SECTION_IDS = [
-  "about",
-  "experience",
-  "skills",
-  "education",
-  "projects",
-] as const;
+import { SECTION_IDS } from "@/constants/sections";
 
 // Hoisted static JSX to prevent recreation on each render
 const SpotlightEffect = (

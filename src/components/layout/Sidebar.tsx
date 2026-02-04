@@ -2,6 +2,7 @@ import { personalInfo } from "@/data/personal";
 import { SocialLinks } from "@/components/shared/SocialLinks";
 import { OptimizedImage } from "@/components/ui/OptimizedImage";
 import { Button } from "@/components/ui/button";
+import { SECTIONS } from "@/constants/sections";
 
 interface SidebarProps {
   activeSection: string;
@@ -9,7 +10,6 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
-  const sections = ["about", "experience", "skills", "education", "projects"];
   const emailLink = personalInfo.social.find(
     (link) => link.platform === "email",
   )?.url;
@@ -104,33 +104,33 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
           aria-label="Main navigation"
         >
           <ul className="space-y-4">
-            {sections.map((section) => (
-              <li key={section}>
+            {SECTIONS.map((section) => (
+              <li key={section.id}>
                 <button
-                  onClick={() => scrollToSection(section)}
+                  onClick={() => scrollToSection(section.id)}
                   className={`group flex items-center text-xs uppercase tracking-widest transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm ${
-                    activeSection === section ? "font-bold" : "font-medium"
+                    activeSection === section.id ? "font-bold" : "font-medium"
                   }`}
                   style={{
                     color:
-                      activeSection === section
+                      activeSection === section.id
                         ? "hsl(48 20% 20%)"
                         : "hsl(48 3% 50%)",
                   }}
-                  aria-current={activeSection === section ? "page" : undefined}
+                  aria-current={activeSection === section.id ? "page" : undefined}
                 >
                   <span
                     className="inline-block h-px transition-all duration-300 mr-4"
                     style={{
-                      width: activeSection === section ? "64px" : "32px",
+                      width: activeSection === section.id ? "64px" : "32px",
                       backgroundColor:
-                        activeSection === section
+                        activeSection === section.id
                           ? "hsl(48 20% 20%)"
                           : "hsl(48 3% 50%)",
                     }}
                     aria-hidden="true"
                   />
-                  {section}
+                  {section.label}
                 </button>
               </li>
             ))}

@@ -81,6 +81,10 @@
             property="og:image"
             content="https://bhavyakandhari.vercel.app/og-image.png"
         />
+        <meta
+            property="og:image:alt"
+            content="Bhavya Kandhari portfolio preview"
+        />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
@@ -96,6 +100,47 @@
             name="twitter:image"
             content="https://bhavyakandhari.vercel.app/og-image.png"
         />
+        <meta
+            name="twitter:image:alt"
+            content="Bhavya Kandhari portfolio preview"
+        />
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://bhavyakandhari.vercel.app/#person",
+                        "name": "Bhavya Kandhari",
+                        "jobTitle": "Software Engineer",
+                        "url": "https://bhavyakandhari.vercel.app/",
+                        "image": "https://bhavyakandhari.vercel.app/og-image.png",
+                        "sameAs": [
+                            "https://github.com/bkandh30",
+                            "https://www.linkedin.com/in/kandharibhavya/"
+                        ],
+                        "email": "mailto:bhavya.kandhari.eng@gmail.com",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Phoenix",
+                            "addressRegion": "AZ",
+                            "addressCountry": "US"
+                        }
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": "https://bhavyakandhari.vercel.app/#website",
+                        "name": "Bhavya Kandhari - Software Engineer",
+                        "url": "https://bhavyakandhari.vercel.app/",
+                        "description": "Software Engineer specializing in full-stack development, data engineering, cloud computing, and distributed systems.",
+                        "publisher": {
+                            "@id": "https://bhavyakandhari.vercel.app/#person"
+                        }
+                    }
+                ]
+            }
+        </script>
 
         <!-- Performance hints -->
         <meta name="theme-color" content="#c96442" />

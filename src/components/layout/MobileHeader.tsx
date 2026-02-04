@@ -62,7 +62,7 @@ export const MobileHeader = () => {
           asChild
           size="sm"
           variant="outline"
-          className="rounded-full text-xs"
+          className="rounded-full text-xs text-primary border-primary/30 hover:text-primary"
         >
           <a href="#projects">Featured Work</a>
         </Button>
@@ -71,7 +71,7 @@ export const MobileHeader = () => {
             asChild
             size="sm"
             variant="outline"
-            className="rounded-full text-xs"
+            className="rounded-full text-xs text-primary border-primary/30 hover:text-primary"
           >
             <a href={emailLink}>Contact</a>
           </Button>

@@ -71,7 +71,7 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
           <Button
             size="sm"
             variant="outline"
-            className="rounded-full text-xs"
+            className="rounded-full text-xs text-primary border-primary/30 hover:text-primary"
             onClick={() => scrollToSection("projects")}
           >
             Featured Work
@@ -81,7 +81,7 @@ export const Sidebar = ({ activeSection, scrollToSection }: SidebarProps) => {
               asChild
               size="sm"
               variant="outline"
-              className="rounded-full text-xs"
+              className="rounded-full text-xs text-primary border-primary/30 hover:text-primary"
             >
               <a href={emailLink}>Contact</a>
             </Button>

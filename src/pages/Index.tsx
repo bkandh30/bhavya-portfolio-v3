@@ -16,7 +16,6 @@ import { useFadeInObserver } from "@/hooks/useFadeInObserver";
 import { useScrollToSection } from "@/hooks/useScrollToSection";
 import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 import { useKeyboardNavigation } from "@/hooks/useKeyboardNavigation";
-import { usePerformanceMonitor } from "@/hooks/usePerformanceMonitor";
 
 const SECTION_IDS = [
   "about",
@@ -46,7 +45,6 @@ const Index = () => {
   useFadeInObserver();
   useKeyboardNavigation(SECTION_IDS, activeSection, scrollToSection);
   useMousePosition(true);
-  usePerformanceMonitor();
 
   return (
     <div
